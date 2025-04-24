@@ -10,6 +10,8 @@
 
 	Win + F1			- Open / Close Calculator
 
+	App + M				- SSH into Mudhorn
+
 	Media Stop			- Open / Minimize Spotify
 	Ctrl + Media Stop	- Close Spotify
 	Alt + Media Stop	- Kill Spotify
@@ -49,12 +51,15 @@
 */
 
 #Include ..\..\Data\Apps.ahk
+#Include ..\..\Data\Private\Servers.ahk
 
 #+e::				App.Explorer.Restart()		; Restart Explorer
 
 #'::				App.CMD.Open(1)				; Open Admin Command Prompt
 #+'::				App.CMD.Open()				; Open Command Prompt
 #F1::				App.Calc.Toggle(1)			; Open / Close Calculator
+
+AppsKey & m::		Mudhorn.SSH()				; SSH into Mudhorn
 
 AppsKey & x:: {
 	if (GetKeyState('Shift')) {
