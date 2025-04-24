@@ -1,0 +1,186 @@
+#Requires AutoHotkey v2.0
+
+#Include Libraries\App.ahk
+#Include Libraries\Explorer.ahk
+#Include Libraries\CMD.ahk
+#Include Libraries\VSCode.ahk
+#Include Env.ahk
+
+global App := {
+	Explorer: AppClass(
+		{
+			exe: 'explorer.exe',
+			title: 'ahk_class CabinetWClass',
+			Restart: Explorer.Restart
+		}
+	),
+
+	Desktop: AppClass(
+		{
+			title: 'ahk_class WorkerW'
+		}
+	),
+
+	CMD: AppClass(
+		{
+			exe: 'cmd.exe',
+			Open: CMD.Open
+		}
+	),
+
+	Calc: AppClass(
+		{
+			exe: 'calc.exe',
+			title: 'Calculadora'
+		}
+	),
+
+	VSCode: AppClass(
+		{
+			exe: 'Code.exe',
+			target: B_AppDataLocal '\Programs\Microsoft VS Code\Code.exe',
+			Open: VSCode.Open
+		}
+	),
+
+	Chrome: AppClass(
+		{
+			target: A_ProgramFiles '\Google\Chrome\Application\chrome.exe'
+		}
+	),
+
+	ChromeBeta: AppClass(
+		{
+			target: A_ProgramFiles '\Google\Chrome Beta\Application\chrome.exe'
+		}
+	),
+
+	Gemini: AppClass(
+		{
+			title: 'Gemini ahk_class Chrome_WidgetWin_1',
+			target: '"' A_ProgramFiles '\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=pificchcdfpinjikejhcfjobjdhcedjj'
+
+		}
+	),
+
+	ChatGPT: AppClass(
+		{
+			title: 'ChatGPT ahk_class Chrome_WidgetWin_1',
+			target: '"' A_ProgramFiles '\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg'
+		}
+	),
+
+	Obsidian: AppClass(
+		{
+			exe: 'Obsidian.exe',
+			target: A_ProgramFiles '\Obsidian\Obsidian.exe'
+		}
+	),
+
+	Notion: AppClass(
+		{
+			exe: 'Notion.exe',
+			target: B_AppDataLocal '\Programs\Notion\Notion.exe'
+		}
+	),
+
+	Discord: AppClass(
+		{
+			title: 'ahk_exe Discord.exe',
+			target: '"' B_AppDataLocal '\Discord\Update.exe" --processStart Discord.exe'
+		}
+	),
+
+	WhatsApp: AppClass(
+		{
+			title: 'WhatsApp',
+			target: 'shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App'
+		}
+	),
+
+	Spotify: AppClass(
+		{
+			exe: 'Spotify.exe'
+		}
+	),
+
+	Steam: AppClass(
+		{
+			exe: 'Steam.exe',
+			title: 'ahk_exe steamwebhelper.exe',
+			target: B_ProgramFilesx86 '\Steam\steam.exe'
+		}
+	),
+
+	SteamBP: AppClass(
+		{
+			exe: 'steamwebhelper.exe',
+			title: 'Big Picture ahk_exe steamwebhelper.exe',
+			target: 'steam://open/bigpicture'
+		}
+	),
+
+	Epic: AppClass(
+		{
+			exe: 'EpicGamesLauncher.exe',
+			target: B_ProgramFilesx86 '\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe'
+		}
+	),
+
+	Xbox: AppClass(
+		{
+			title: 'Xbox',
+			target: 'shell:AppsFolder\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App'
+		}
+	),
+
+	Audacity: AppClass(
+		{
+			exe: 'audacity.exe'
+		}
+	),
+
+	Fusion360: AppClass(
+		{
+			exe: 'fusion360.exe'
+		}
+	),
+
+	Blockbench: AppClass(
+		{
+			exe: 'Blockbench.exe'
+		}
+	),
+
+	Fortnite: AppClass(
+		{
+			exe: 'FortniteClient-Win64-Shipping.exe'
+		}
+	),
+
+	HalfLife2: AppClass(
+		{
+			exe: 'hl2.exe',
+			title: 'Half-Life 2 ahk_exe hl2.exe'
+		}
+	),
+
+	Minecraft: AppClass(
+		{
+			title: 'Minecraft ahk_class GLFW30'
+		}
+	),
+
+	TaskBarX: AppClass(
+		{
+			target: 'D:\System\Programs\TaskbarX\TaskbarX.exe'
+		}
+	),
+
+	Magpie: AppClass(
+		{
+			exe: 'Magpie.exe',
+			target: 'D:\System\Programs\Magpie-v0.11.1-x64\Magpie.exe'
+		}
+	),
+}
