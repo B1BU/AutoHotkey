@@ -86,7 +86,7 @@ global App := {
 
 	Discord: AppClass(
 		{
-			title: 'ahk_exe Discord.exe',
+			exe: 'Discord.exe',
 			target: '"' B_AppDataLocal '\Discord\Update.exe" --processStart Discord.exe'
 		}
 	),

@@ -12,8 +12,8 @@
 
 	App + M				- SSH into Mudhorn
 
-	Media Stop			- Open / Minimize Spotify
-	Ctrl + Media Stop	- Close Spotify
+	Media Stop			- Open / Close Spotify
+	Ctrl + Media Stop	- Minimize Spotify
 	Alt + Media Stop	- Kill Spotify
 
 	App + C				- Open Chrome
@@ -46,6 +46,7 @@
 
 	App + D				- Open / Minimize Discord
 	App + Ctrl + D		- Close Discord
+	App + Alt + D		- Kill Discord
 
 	App + W				- Open / Close WhatsApp
 */
@@ -67,8 +68,8 @@ AppsKey & x:: {
 	}
 }
 
-Media_Stop::		App.Spotify.Toggle()		; Open / Minimize Spotify
-^Media_Stop::		App.Spotify.Close()			; Close Spotify
+Media_Stop::		App.Spotify.Toggle(1)		; Open / Close Spotify
+^Media_Stop::		App.Spotify.Minimize()		; Minimize Spotify
 !Media_Stop::		App.Spotify.Kill()			; Kill Spotify
 
 AppsKey & c:: {
@@ -112,7 +113,9 @@ AppsKey & g:: {
 AppsKey & v::		App.VSCode.Open()			; Open VSCode
 
 AppsKey & d:: {
-	if (GetKeyState('Control')) {
+	if (GetKeyState('Alt')) {
+		App.Discord.Kill()						; Kill Discord
+	} else if (GetKeyState('Control')) {
 		App.Discord.Close()						; Close Discord
 	} else {
 		App.Discord.Toggle()					; Open / Minimize Discord
