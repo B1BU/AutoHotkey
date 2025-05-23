@@ -134,6 +134,12 @@ global App := {
 		}
 	),
 
+	OBS: AppClass(
+		{
+			exe: 'obs64.exe'
+		}
+	),
+
 	Audacity: AppClass(
 		{
 			exe: 'audacity.exe'
