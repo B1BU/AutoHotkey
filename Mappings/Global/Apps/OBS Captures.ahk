@@ -12,32 +12,32 @@
 	KeyWait('Control')
 	KeyWait('PrintScreen')
 
+	PlaySound('snap3')
+
 	Send('{F13 Down}')
 	Sleep(50)
 	Send('{F13 Up}')
-
-	PlaySound('snap3')
 }
 
 +PrintScreen:: {				; Clip
 	KeyWait('Shift')
 	KeyWait('PrintScreen')
 
+	PlaySound('scissors2')
+
 	Send('{F14 Down}')
 	Sleep(50)
 	Send('{F14 Up}')
-
-	PlaySound('scissors2')
 }
 
-^!PrintScreen:: {				; Recording
+^+PrintScreen:: {				; Recording
 	KeyWait('Control')
-	KeyWait('Alt')
+	KeyWait('Shift')
 	KeyWait('PrintScreen')
+
+	PlaySound('beepbeep')
 
 	Send('{F15 Down}')
 	Sleep(50)
 	Send('{F15 Up}')
-
-	PlaySound('beepbeep')
 }
