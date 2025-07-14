@@ -10,7 +10,7 @@
 
 	Win + F1			- Open / Close Calculator
 
-	App + M				- SSH into Mudhorn
+	App + H				- SSH into Mudhorn
 
 	Media Stop			- Open / Close Spotify
 	Ctrl + Media Stop	- Minimize Spotify
@@ -26,10 +26,6 @@
 	App + Shift + G		- Open ChatGPT
 	App + Ctrl + G		- Close ChatGPT
 
-	App + H				- Open / Minimize Gemini
-	App + Shift + H		- Open Gemini
-	App + Ctrl + H		- Close Gemini
-
 	App + O				- Open / Close Obsidian
 
 	App + V				- Open VSCode
@@ -43,6 +39,8 @@
 	App + Alt + End		- Kill Epic Games
 
 	App + Del			- Open / Close Xbox App
+
+	App + M				- Open / Close Modrinth
 
 	App + D				- Open / Minimize Discord
 	App + Ctrl + D		- Close Discord
@@ -60,7 +58,7 @@
 #+'::				App.CMD.Open()				; Open Command Prompt
 #F1::				App.Calc.Toggle(1)			; Open / Close Calculator
 
-AppsKey & m::		Mudhorn.SSH()				; SSH into Mudhorn
+AppsKey & h::		Mudhorn.SSH()				; SSH into Mudhorn
 
 AppsKey & x:: {
 	if (GetKeyState('Shift')) {
@@ -87,16 +85,6 @@ AppsKey & n:: {
 		App.Notion.Kill()						; Kill Notion
 	} else {
 		App.Notion.Toggle(1)					; Open / Close Notion
-	}
-}
-
-AppsKey & h:: {
-	if (GetKeyState('Control')) {
-		App.Gemini.Close()						; Close Gemini
-	} else if (GetKeyState('Shift')) {
-		App.Gemini.Open()						; Open Gemini
-	} else {
-		App.Gemini.Toggle()						; Open / Minimize Gemini
 	}
 }
 
@@ -149,3 +137,5 @@ AppsKey & End:: {
 }
 
 AppsKey & Del::		App.Xbox.Toggle(1)			; Open / Close Xbox App
+
+AppsKey & m::		App.Modrinth.Toggle(1)		; Open / Close Xbox App

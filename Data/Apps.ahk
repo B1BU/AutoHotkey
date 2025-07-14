@@ -171,6 +171,13 @@ global App := {
 		}
 	),
 
+	Modrinth: AppClass(
+		{
+			exe: 'Modrinth App.exe',
+			target: 'C:\Program Files\Modrinth App\Modrinth App.exe'
+		}
+	),
+
 	Minecraft: AppClass(
 		{
 			title: 'Minecraft ahk_class GLFW30'
