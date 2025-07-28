@@ -17,7 +17,6 @@
 	Alt + Media Stop	- Kill Spotify
 
 	App + C				- Open Chrome
-	App + Shift + C		- Open Chrome Beta
 
 	App + N				- Open / Close Notion
 	App + Alt + N		- Kill Notion
@@ -70,13 +69,7 @@ Media_Stop::		App.Spotify.Toggle(1)		; Open / Close Spotify
 ^Media_Stop::		App.Spotify.Minimize()		; Minimize Spotify
 !Media_Stop::		App.Spotify.Kill()			; Kill Spotify
 
-AppsKey & c:: {
-	if (GetKeyState('Shift')) {
-		App.ChromeBeta.Open()					; Open Chrome Beta
-	} else {
-		App.Chrome.Open()						; Open Chrome
-	}
-}
+AppsKey & c::		App.Chrome.Open()			; Open Chrome
 
 AppsKey & o::		App.Obsidian.Toggle(1)		; Open / Close Obsidian
 
