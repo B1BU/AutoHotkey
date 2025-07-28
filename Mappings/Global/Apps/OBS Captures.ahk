@@ -11,7 +11,3 @@
 ^PrintScreen:: ^F21
 +PrintScreen:: +F21
 ^+PrintScreen:: ^+F21
-
-^PrintScreen:: PlaySound('beep')
-+PrintScreen:: PlaySound('beepbeep')
-^+PrintScreen:: PlaySound('beeplow')
