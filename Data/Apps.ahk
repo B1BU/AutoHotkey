@@ -184,6 +184,12 @@ global App := {
 		}
 	),
 
+	Peak: AppClass(
+		{
+			title: 'PEAK ahk_class UnityWndClass'
+		}
+	),
+
 	TaskBarX: AppClass(
 		{
 			target: 'D:\System\Programs\TaskbarX\TaskbarX.exe'

@@ -10,4 +10,5 @@
 #Include Scoped\Magpie.ahk
 #Include Scoped\Fortnite.ahk
 #Include Scoped\Minecraft.ahk
+#Include Scoped\Peak.ahk
 #Include Scoped\Half-Life 2.ahk
