@@ -174,7 +174,7 @@ global App := {
 	Modrinth: AppClass(
 		{
 			exe: 'Modrinth App.exe',
-			target: 'C:\Program Files\Modrinth App\Modrinth App.exe'
+			target: B_AppDataLocal '\Modrinth App\Modrinth App.exe'
 		}
 	),
 
