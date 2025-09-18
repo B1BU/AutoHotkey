@@ -13,22 +13,18 @@
 *^CtrlBreak:: {
 	SoundBeep()
 	if GetKeyState('Shift') {
-		; Restart to BIOS
-		Power.Restart(1)
+		Power.RestartToBIOS()
 	} else {
-		; Suspend
 		Power.Suspend()
 	}
 }
 
 !Pause:: {
-	; Shut down
 	SoundBeep()
 	Power.Shutdown()
 }
 
 +Pause:: {
-	; Restart
 	SoundBeep()
 	Power.Restart()
 }
