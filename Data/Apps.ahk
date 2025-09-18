@@ -7,6 +7,12 @@
 #Include Env.ahk
 
 global App := {
+	AHK: AppClass(
+		{
+			exe: 'AutoHotkey64.exe'
+		}
+	),
+
 	Explorer: AppClass(
 		{
 			exe: 'explorer.exe',
