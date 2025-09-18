@@ -16,7 +16,7 @@
 #HotIf ( ; EXPLORER
 	WinActive(App.Explorer.title)
 )
-	~Esc:: !Up ; Go up
+	Home:: !Up ; Go up
 #HotIf ( ; EXPLORER OR DESKTOP
 	WinActive(App.Explorer.title) or
 	WinActive(App.Desktop.title)
