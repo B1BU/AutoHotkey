@@ -4,12 +4,13 @@
 	Ctrl + Backspace	- Delete word left
 */
 /*	Keybindings
-	XButton1			- Go up
-	XButton2			- Go back
-	Shift + XButton2	- Go foward
+	Side Button 3       - Go up
 
-	Ctrl + Alt + V		- Paste as symlink
+	Ctrl + Alt + V      - Paste as symlink
+	Ctrl + Shift + V    - Paste as shortcut (Not yet implemented)
 */
+
+; ! ADD PASTE AS SHORTCUT
 
 #Include ..\..\Data\Libraries\Explorer.ahk
 #Include ..\..\Data\Apps.ahk
@@ -19,7 +20,5 @@
 
 	^!v:: Explorer.PasteSymlink()	; Paste as symlink
 #HotIf (WinActive(App.Explorer.title))
-	XButton1:: !Up					; Go up
-	XButton2:: XButton1				; Go back
-	+XButton2:: XButton2			; Go foward
+	Home:: !Up					    ; Go up
 #HotIf
