@@ -1,24 +1,26 @@
-#Requires AutoHotkey v2.0
+/*
+	[FIXES]
+	Ctrl + Backspace : Delete word left
 
-/*	Fixes
-	Ctrl + Backspace	- Delete word left
+	[KEYBINDINGS]
+	Esc              : Go up
+	Ctrl + Alt + V   : Paste path as symlink
+	Ctrl + Shift + V : Paste path as shortcut (Not implemented)
 */
-/*	Keybindings
-	Side Button 3       - Go up
-
-	Ctrl + Alt + V      - Paste as symlink
-	Ctrl + Shift + V    - Paste as shortcut (Not yet implemented)
-*/
-
 ; ! ADD PASTE AS SHORTCUT
 
+#Requires AutoHotkey v2.0
 #Include ..\..\Data\Libraries\Explorer.ahk
 #Include ..\..\Data\Apps.ahk
 
-#HotIf (WinActive(App.Explorer.title) or WinActive(App.Desktop.title))
+#HotIf ( ; EXPLORER
+	WinActive(App.Explorer.title)
+)
+	~Esc:: !Up ; Go up
+#HotIf ( ; EXPLORER OR DESKTOP
+	WinActive(App.Explorer.title) or
+	WinActive(App.Desktop.title)
+)
 	#Include ..\..\Data\Common Rebinds\Force Delete Word Left.ahk
-
-	^!v:: Explorer.PasteSymlink()	; Paste as symlink
-#HotIf (WinActive(App.Explorer.title))
-	Home:: !Up					    ; Go up
+	^!v:: Explorer.PasteSymlink() ; Paste as symlink
 #HotIf
