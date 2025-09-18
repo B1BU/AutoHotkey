@@ -1,0 +1,2 @@
+- Update bindings
+- Add paste as shortcut functionality to explorer
