@@ -81,7 +81,7 @@ class Fortnite {
 
 #HotIf (WinActive(App.Fortnite.title))
 	; General
-	Alt Up:: Send('{=}')						; Auto run
+	Alt::=						; Auto run
 
 	; Menus
 	Alt & LButton:: Send('{Enter}')				; Enter
