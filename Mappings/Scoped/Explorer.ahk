@@ -16,7 +16,8 @@
 #HotIf ( ; EXPLORER
 	WinActive(App.Explorer.title)
 )
-	Home:: !Up ; Go up
+	Home::  !Up   ; Go up
+	+Home:: +Home ; Select to start
 #HotIf ( ; EXPLORER OR DESKTOP
 	WinActive(App.Explorer.title) or
 	WinActive(App.Desktop.title)
