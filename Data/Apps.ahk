@@ -34,6 +34,12 @@ global App := {
 		}
 	),
 
+	PowerShell: AppClass(
+		{
+			exe: 'powershell.exe'
+		}
+	),
+
 	Calc: AppClass(
 		{
 			exe: 'calc.exe',
