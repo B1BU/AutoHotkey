@@ -13,7 +13,7 @@ class Server {
 	}
 
 	SSH() {
-		CMD.Run(false, 'ssh ' this.creds.username '@' this.address)
+		Cmd.Run(false, 'ssh ' this.creds.username '@' this.address)
 		WinWaitActive(A_ComSpec)
 		Sleep(100)
 		Send(this.creds.password '{Enter}')

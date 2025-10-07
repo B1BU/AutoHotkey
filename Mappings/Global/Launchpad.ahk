@@ -1,51 +1,51 @@
 /*
 	[KEYBINDINGS]
-	Win + Shift + E    : Restart Explorer
+	Win + Shift + E    - Restart Explorer
 
-	App + Shift + X    : Restart TaskBarX
+	App + Shift + X    - Restart TaskBarX
 
-	Win         + '    : Open Admin PowerShell
-	Win + Shift + '    : Open PowerShell
+	Win         + '    - Open Admin PowerShell
+	Win + Shift + '    - Open PowerShell
 
-	Win + F1           : Open / Close Calculator
+	Win + F1           - Open / Close Calculator
 
-	App + H            : SSH into Mudhorn
+	App + H            - SSH into Mudhorn
 
-	Media Stop         : Open / Close Spotify
-	Ctrl + Media Stop  : Minimize Spotify
-	Alt  + Media Stop  : Kill Spotify
+	Media Stop         - Open / Close Spotify
+	Ctrl + Media Stop  - Minimize Spotify
+	Alt  + Media Stop  - Kill Spotify
 
-	App + C            : Open Chrome
-	App + C (Hold 3s)  : Open Chrome Beta
+	App + C            - Open Chrome
+	App + C (Hold 3s)  - Open Chrome Beta
 
-	App + N            : Open / Close Notion
-	App + Alt   + N    : Kill Notion
+	App + N            - Open / Close Notion
+	App + Alt   + N    - Kill Notion
 
-	App + G            : Open / Minimize ChatGPT
-	App + Shift + G    : Open ChatGPT
-	App + Ctrl  + G    : Close ChatGPT
+	App + G            - Open / Minimize ChatGPT
+	App + Shift + G    - Open ChatGPT
+	App + Ctrl  + G    - Close ChatGPT
 
-	App + O            : Open / Close Obsidian
+	App + O            - Open / Close Obsidian
 
-	App + V            : Open VSCode
+	App + V            - Open VSCode
 
-	App + Home         : Open Steam → Open / Close Big Picture
-	App + Shift + Home : Open / Close Big Picture
-	App + Ctrl  + Home : Close Steam
-	App + Alt   + Home : Kill Steam
+	App + Home         - Open Steam → Open / Close Big Picture
+	App + Shift + Home - Open / Close Big Picture
+	App + Ctrl  + Home - Close Steam
+	App + Alt   + Home - Kill Steam
 
-	App + End          : Open / Close Epic Games
-	App + Alt + End    : Kill Epic Games
+	App + End          - Open / Close Epic Games
+	App + Alt + End    - Kill Epic Games
 
-	App + Del          : Open / Close Xbox App
+	App + Del          - Open / Close Xbox App
 
-	App + M            : Open / Close Modrinth
+	App + M            - Open / Close Modrinth
 
-	App + D            : Open / Minimize Discord
-	App + Ctrl + D     : Close Discord
-	App + Alt  + D     : Kill Discord
+	App + D            - Open / Minimize Discord
+	App + Ctrl + D     - Close Discord
+	App + Alt  + D     - Kill Discord
 
-	App + W            : Open / Close WhatsApp
+	App + W            - Open / Close WhatsApp
 */
 
 #Requires AutoHotkey v2.0

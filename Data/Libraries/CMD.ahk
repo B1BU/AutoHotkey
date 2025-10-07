@@ -3,7 +3,7 @@
 #Include ..\Extensions\Array.ahk
 #Include ..\Env.ahk
 
-class CMD {
+class Cmd {
 	static Open(adm := false, args := '') {
 		args := (args) ? ' ' args : ''
 
@@ -21,6 +21,6 @@ class CMD {
 
 		args := (commands) ? ' /C ' commands.Join(' & ') : ''
 
-		CMD.Open(adm, args)
+		Cmd.Open(adm, args)
 	}
 }

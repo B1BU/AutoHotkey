@@ -30,7 +30,7 @@ global App := {
 	CMD: AppClass(
 		{
 			exe: 'cmd.exe',
-			Open: CMD.Open
+			Open: Cmd.Open
 		}
 	),
 

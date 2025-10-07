@@ -2,7 +2,7 @@
 
 #Include ..\Apps.ahk
 #Include Path.ahk
-#Include CMD.ahk
+#Include Cmd.ahk
 
 class Explorer {
 	static GetHwnd() => WinActive(App.Explorer.title)
@@ -47,7 +47,7 @@ class Explorer {
 			commands.Push(command)
 		}
 
-		CMD.Run(1, commands*)
+		Cmd.Run(1, commands*)
 	}
 
 	static Restart() => App.Explorer.Kill()

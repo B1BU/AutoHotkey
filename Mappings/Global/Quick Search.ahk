@@ -1,22 +1,26 @@
 #Requires AutoHotkey v2.0
 
-/*	Keybindings
-	App + Enter		- Search selection / Open URL
+/*
+	[KEYBINDINGS]
+	App + Enter        - Search or open selection
+	App + Ctrl + Enter - Search or open clipboard content
 */
 
 #Include ..\..\Data\Libraries\Text.ahk
-#Include ..\..\Data\Libraries\URL.ahk
+#Include ..\..\Data\Libraries\Web.ahk
 
-AppsKey & Enter:: {		; Search selection / Open URL
-	if not (selection := GetSelection()) {
-		return
-	}
-
-	if (URL.IsValid(selection)) {
-		address := (URL.HasProtocol(selection)) ? selection : 'https://' selection
-	} else {
-		address := 'https://www.google.com/search?q=' RegExReplace(selection, '\s+', '+')
-	}
-
-	Run(address)
+AppsKey & sc073:: {
+	if GetKeyState('Control')
+		return Web.SearchOrOpen(A_Clipboard)
+	Web.SearchOrOpen(GetSelection())
 }
+
+/*
+	[STUFF FOR TESTING]
+	What is the current time
+	What day is it
+	Clipboard wikipedia
+
+	https://www.omfgdogs.com/
+	regex101.com
+*/

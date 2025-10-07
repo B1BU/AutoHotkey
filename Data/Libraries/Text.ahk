@@ -3,20 +3,20 @@
 StrSentence(str) => RegExReplace(str, '^(\PL*\pL)(.*)', '$U1$L2')
 
 Write(str) {
-	prevClipboard := ClipboardAll()
+	prev_clipboard := ClipboardAll()
 		A_Clipboard := str
 		Send('^v')
 		Sleep(20)
-	A_Clipboard := prevClipboard
+	A_Clipboard := prev_clipboard
 }
 
 GetSelection() {
-	prevClipboard := ClipboardAll()
+	prev_clipboard := ClipboardAll()
 		A_Clipboard := ''
 		Send('^c')
 		ClipWait(1)
 		selection := A_Clipboard
-	A_Clipboard := prevClipboard
+	A_Clipboard := prev_clipboard
 
 	return selection
 }
