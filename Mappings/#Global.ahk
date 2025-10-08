@@ -8,4 +8,3 @@
 #Include Global\Launchpad.ahk
 #Include Global\Text Processing.ahk
 #Include Global\Quick Search.ahk
-#Include Global\Windows.ahk
