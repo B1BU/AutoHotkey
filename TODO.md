@@ -1,2 +1,3 @@
 - Update bindings
 - Add paste as shortcut functionality to explorer
+- Replace cmd with powershell on launchpad
