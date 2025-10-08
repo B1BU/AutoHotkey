@@ -1,9 +1,10 @@
 #Requires AutoHotkey v2.0
 
-/*	Keybindings
-	LWin + Wheel Up		- Volume Up
-	LWin + Wheel Down	- Volume Down
-*/
+LWin & WheelUp::   Send('{Volume_Up}')
+RWin & WheelUp::   Send('{Volume_Up}')
 
-LWin & WheelUp::	Send('{Volume_Up}')
-LWin & WheelDown::	Send('{Volume_Down}')
+LWin & WheelDown:: Send('{Volume_Down}')
+RWin & WheelDown:: Send('{Volume_Down}')
+
+LWin & MButton::   Send('{Volume_Mute}')
+RWin & MButton::   Send('{Volume_Mute}')
