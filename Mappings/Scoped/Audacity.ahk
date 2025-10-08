@@ -3,5 +3,5 @@
 #Include ..\..\Data\Apps.ahk
 
 #HotIf (WinActive(App.Audacity.title))
-	#Include ..\..\Data\Common Rebinds\Alt Redo.ahk
+	#Include ..\Common\Alt Redo.ahk
 #HotIf
