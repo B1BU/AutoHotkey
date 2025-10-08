@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Data\Extensions\Builtin Functions.ahk
+#Include ..\..\Data\Extensions\Built-In.ahk
 #Include ..\..\Data\Libraries\Text.ahk
 #Include ..\..\Data\Apps.ahk
 

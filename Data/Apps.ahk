@@ -1,10 +1,10 @@
 #Requires AutoHotkey v2.0
 
+#Include Extensions\Built-In.ahk
 #Include Libraries\App.ahk
 #Include Libraries\Explorer.ahk
 #Include Libraries\CMD.ahk
 #Include Libraries\VSCode.ahk
-#Include Env.ahk
 
 global App := {
 	AHK: AppClass(
@@ -50,7 +50,7 @@ global App := {
 	VSCode: AppClass(
 		{
 			exe: 'Code.exe',
-			target: B_AppDataLocal '\Programs\Microsoft VS Code\Code.exe',
+			target: A_AppDataLocal '\Programs\Microsoft VS Code\Code.exe',
 			Open: VSCode.Open
 		}
 	),
@@ -92,14 +92,14 @@ global App := {
 	Notion: AppClass(
 		{
 			exe: 'Notion.exe',
-			target: B_AppDataLocal '\Programs\Notion\Notion.exe'
+			target: A_AppDataLocal '\Programs\Notion\Notion.exe'
 		}
 	),
 
 	Discord: AppClass(
 		{
 			exe: 'Discord.exe',
-			target: '"' B_AppDataLocal '\Discord\Update.exe" --processStart Discord.exe'
+			target: '"' A_AppDataLocal '\Discord\Update.exe" --processStart Discord.exe'
 		}
 	),
 
@@ -120,7 +120,7 @@ global App := {
 		{
 			exe: 'Steam.exe',
 			title: 'ahk_exe steamwebhelper.exe',
-			target: B_ProgramFilesx86 '\Steam\steam.exe'
+			target: A_ProgramFilesx86 '\Steam\steam.exe'
 		}
 	),
 
@@ -135,7 +135,7 @@ global App := {
 	Epic: AppClass(
 		{
 			exe: 'EpicGamesLauncher.exe',
-			target: B_ProgramFilesx86 '\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe'
+			target: A_ProgramFilesx86 '\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe'
 		}
 	),
 
@@ -186,7 +186,7 @@ global App := {
 	Modrinth: AppClass(
 		{
 			exe: 'Modrinth App.exe',
-			target: B_AppDataLocal '\Modrinth App\Modrinth App.exe'
+			target: A_AppDataLocal '\Modrinth App\Modrinth App.exe'
 		}
 	),
 

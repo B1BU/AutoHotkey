@@ -1,16 +1,16 @@
 #Requires AutoHotkey v2.0
 
+#Include ..\Extensions\Built-In.ahk
 #Include ..\Extensions\Array.ahk
-#Include ..\Env.ahk
 
 class Cmd {
 	static Open(adm := false, args := '') {
 		args := (args) ? ' ' args : ''
 
 		if (adm) {
-			try Run('*runas ' A_ComSpec args, B_System32)
+			try Run('*runas ' A_ComSpec args, A_System32)
 		} else {
-			Run(A_ComSpec args, B_UserProfile)
+			Run(A_ComSpec args, A_UserProfile)
 		}
 	}
 
