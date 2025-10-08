@@ -3,8 +3,5 @@
 #NoTrayIcon
 A_MenuMaskKey := 'vkE8'
 
-/*	To-do
-*/
-
 #Include Mappings\#Global.ahk
 #Include Mappings\#Scoped.ahk
