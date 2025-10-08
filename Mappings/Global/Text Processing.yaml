@@ -1,0 +1,4 @@
+Caps Lock + Up    : Transform selection to upper case
+Caps Lock + Down  : Transform selection to lower case
+Caps Lock + Left  : Transform selection to sentence case
+Caps Lock + Right : Transform selection to title case

@@ -1,67 +1,6 @@
 #Requires AutoHotkey v2.0
 A_MenuMaskKey := 'vkE8'
 
-/*	Keybindings
-	[Menus]
-	Alt + LButton		- Enter
-	Alt + RButton		- Esc
-
-	[Emote Wheel]
-	\ + Q				- Previous emote page
-	\ + E				- Next emote page
-
-	[Inventory]
-	Hold LButton		- View item info
-	RButton				- Drop item
-	MButton				- Drop half
-
-	[Comms]
-	Alt + MButton		- Mark danger
-
-	MButton + Q			- Previous comms page
-	MButton + E			- Next comms page
-
-	MButton + RButton	- Close comms
-
-	[Requests]
-	PgUp + Q			- Previous requests page
-	PgUp + E			- Next requests page
-
-	PgUp + RButton		- Close requests
-
-	[Mod Bench]
-	CapsLock + W		- Previous category
-	CapsLock + S		- Next category
-	CapsLock + A		- Previous part
-	CapsLock + D		- Next part
-
-	CapsLock + LButton	- Buy and equip/Remove mod
-	CapsLock + RButton	- Exit mod bench
-
-	[Building]
-	Xbutton2 + E		- Repair piece
-		[Building Mode OFF]
-		Xbutton2 + Q		- Enter building mode
-
-		Xbutton2 + F		- Build wall
-		Xbutton2 + X		- Build floor
-		Xbutton2 + C		- Build stair
-		Xbutton2 + V		- Build pyramid
-		Xbutton2 + Z		- Build trap
-
-		[Building Mode ON]
-		Q					- Exit building mode
-
-		Wheel Up			- Previous material
-		Wheel Down			- Next material
-
-		F					- Build wall
-		X					- Build floor
-		C					- Build stair
-		V					- Build pyramid
-		Z					- Build trap
-*/
-
 #Include ..\..\Data\Extensions\Object.ahk
 #Include ..\..\Data\Apps.ahk
 

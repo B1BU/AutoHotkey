@@ -1,11 +1,5 @@
 #Requires AutoHotkey v2.0
 
-/*	Keybinds
-	[Scroll Lock ON]
-	F5			- Reload datapacks
-	Shift + K	- Commit suicide
-*/
-
 #Include ..\..\Data\Libraries\Text.ahk
 #Include ..\..\Data\Apps.ahk
 

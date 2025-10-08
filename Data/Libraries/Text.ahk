@@ -1,7 +1,5 @@
 #Requires AutoHotkey v2.0
 
-StrSentence(str) => RegExReplace(str, '^(\PL*\pL)(.*)', '$U1$L2')
-
 Write(str) {
 	prev_clipboard := ClipboardAll()
 		A_Clipboard := str

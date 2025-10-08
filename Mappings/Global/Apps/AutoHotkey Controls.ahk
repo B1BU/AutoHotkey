@@ -1,12 +1,5 @@
 #Requires AutoHotkey v2.0
 
-/*	Keybindings
-	RAlt + V			- Edit Autohotkey folder
-	RAlt + E			- Open AutoHotkey folder
-	RAlt + F5			- Reload AutoHotkey script
-	RAlt + F4			- Kill AutoHotkey
-*/
-
 #Include ..\..\..\Data\Libraries\Sound.ahk
 #Include ..\..\..\Data\Libraries\VSCode.ahk
 #Include ..\..\..\Data\Apps.ahk

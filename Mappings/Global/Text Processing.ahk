@@ -1,14 +1,7 @@
 #Requires AutoHotkey v2.0
 
-/*	Keybindings
-	Caps Lock + Up		- Convert selection to upper case
-	Caps Lock + Right	- Convert selection to title case
-	Caps Lock + Left	- Convert selection to sentence case
-	Caps Lock + Down	- Convert selection to lower case
-*/
-
+#Include ..\..\Data\Extensions\Builtin Functions.ahk
 #Include ..\..\Data\Libraries\Text.ahk
-
 #Include ..\..\Data\Apps.ahk
 
 class TextProcessing {

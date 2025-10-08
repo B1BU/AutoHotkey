@@ -1,0 +1,7 @@
+Color picker open:
+  H	: Pick Hex
+  C	: Pick RGB
+  R	: Pick Red
+  G	: Pick Green
+  B	: Pick Blue
+  X	: Pick Hex without number sign

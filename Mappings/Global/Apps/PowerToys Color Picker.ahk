@@ -1,15 +1,5 @@
 #Requires AutoHotkey v2.0
 
-/*	Keybindings
-	[Color Picker Open]
-	H	- Pick Hex
-	C	- Pick RGB
-	R	- Pick Red
-	G	- Pick Green
-	B	- Pick Blue
-	X	- Pick Hex without #
-*/
-
 #Include ..\..\..\Data\Extensions\Object.ahk
 
 class ColorPicker {
@@ -52,12 +42,12 @@ class ColorPicker {
 }
 
 #HotIf (WinExist(ColorPicker.title))
-	h:: ColorPicker.Pick('hex')		; Hex
-	x:: ColorPicker.Pick('x')		; Hex without #
-	r:: ColorPicker.Pick('r')		; Red
-	g:: ColorPicker.Pick('g')		; Green
-	b:: ColorPicker.Pick('b')		; Blue
-	c:: ColorPicker.Pick('rgb')		; RGB
+	h:: ColorPicker.Pick('hex') ; Hex
+	x:: ColorPicker.Pick('x')   ; Hex without #
+	r:: ColorPicker.Pick('r')   ; Red
+	g:: ColorPicker.Pick('g')   ; Green
+	b:: ColorPicker.Pick('b')   ; Blue
+	c:: ColorPicker.Pick('rgb') ; RGB
 #HotIf
 
 _ColorPickerWatcher() {

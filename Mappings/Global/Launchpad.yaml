@@ -3,12 +3,12 @@ Explorer:
 Calculator:
   Win + F1               : Open / Close Calculator
 CMD:
-  Win + '                : Open Admin CMD
+  Win + '                : Open CMD (Admin)
   Win + Shift + '        : Open CMD
 
 Chrome:
   App + C                : Open Chrome
-  App + C (3s)           : Open Chrome Beta
+  App + C (Hold 3s)      : Open Chrome Beta
 
 Discord:
   App + D                : Open / Minimize Discord
