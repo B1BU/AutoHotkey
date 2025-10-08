@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Data\Libraries\Text.ahk
-#Include ..\..\Data\Libraries\Web.ahk
+#Include ..\..\Libraries\Text.ahk
+#Include ..\..\Libraries\Web.ahk
 
 AppsKey & sc073:: {
 	if GetKeyState('Control')

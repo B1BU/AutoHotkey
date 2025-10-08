@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Apps.ahk
+#Include ..\Data\Apps.ahk
 #Include Path.ahk
 #Include Cmd.ahk
 

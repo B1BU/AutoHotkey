@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Data\Extensions\Built-In.ahk
-#Include ..\..\Data\Libraries\Text.ahk
+#Include ..\..\Extensions\Built-In.ahk
+#Include ..\..\Libraries\Text.ahk
 #Include ..\..\Data\Apps.ahk
 
 class TextProcessing {

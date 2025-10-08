@@ -1,7 +1,7 @@
 ; ! ADD PASTE AS SHORTCUT
 
 #Requires AutoHotkey v2.0
-#Include ..\..\Data\Libraries\Explorer.ahk
+#Include ..\..\Libraries\Explorer.ahk
 #Include ..\..\Data\Apps.ahk
 
 #HotIf WinActive(App.Explorer.title) ; Explorer

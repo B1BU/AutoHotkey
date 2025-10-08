@@ -1,10 +1,10 @@
 #Requires AutoHotkey v2.0
 
-#Include Extensions\Built-In.ahk
-#Include Libraries\App.ahk
-#Include Libraries\Explorer.ahk
-#Include Libraries\CMD.ahk
-#Include Libraries\VSCode.ahk
+#Include ..\Extensions\Built-In.ahk
+#Include ..\Libraries\App.ahk
+#Include ..\Libraries\Explorer.ahk
+#Include ..\Libraries\CMD.ahk
+#Include ..\Libraries\VSCode.ahk
 
 global App := {
 	AHK: AppClass(

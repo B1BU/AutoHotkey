@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Data\Libraries\Power.ahk
+#Include ..\..\Libraries\Power.ahk
 
 *^CtrlBreak:: {
 	SoundBeep()
