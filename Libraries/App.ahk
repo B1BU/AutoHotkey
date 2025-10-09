@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Extensions\Object.ahk
+#Include Extensions.ahk
 
 class AppClass {
 	__New(params) {
@@ -8,41 +8,41 @@ class AppClass {
 			params := {exe: params}
 		}
 
-		this.exe		:= params.Get('exe')
-		this.title		:= params.Get('title', 'ahk_exe ' this.exe)
-		this.target		:= params.Get('target', this.exe)
+		this.exe		:= ObjGet(params, 'exe')
+		this.title		:= ObjGet(params, 'title', 'ahk_exe ' this.exe)
+		this.target		:= ObjGet(params, 'target', this.exe)
 
-		this.Open		:= params.Get('Open',
+		this.Open		:= ObjGet(params, 'Open',
 			(this) {
 				Run(this.target)
 			}
 		)
 
-		this.Focus		:= params.Get('Focus',
+		this.Focus		:= ObjGet(params, 'Focus',
 			(this) {
 				try WinActivate(this.title)
 			}
 		)
 
-		this.Minimize	:= params.Get('Minimize',
+		this.Minimize	:= ObjGet(params, 'Minimize',
 			(this) {
 				try WinMinimize(this.title)
 			}
 		)
 
-		this.Close		:= params.Get('Close',
+		this.Close		:= ObjGet(params, 'Close',
 			(this) {
 				try WinClose(this.title)
 			}
 		)
 
-		this.Kill		:= params.Get('Kill',
+		this.Kill		:= ObjGet(params, 'Kill',
 			(this) {
 				try ProcessClose(this.exe)
 			}
 		)
 
-		this.Restart	:= params.Get('Restart',
+		this.Restart	:= ObjGet(params, 'Restart',
 			(this) {
 				this.Kill()
 				WinWaitClose(this.title,, 3)

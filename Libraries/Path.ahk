@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Extensions\Array.ahk
+#Include Extensions.ahk
 
 class Path {
 	static sep := (A_OSVersion) ? '\' : '/'
@@ -12,9 +12,9 @@ class Path {
 		return (result.Length) ? result : ['']
 	}
 
-	static Join(_paths*) => Path.Normalize(_paths.Join(Path.sep))
+	static Join(_paths*) => Path.Normalize(ArrJoin(_paths, Path.sep))
 
-	static Ascend(_path, _ascend := 1) => Path.Join(Path.Split(_path).Slice(0, -_ascend)*)
+	static Ascend(_path, _ascend := 1) => Path.Join(ArrSlice(Path.Split(_path), 0, -_ascend)*)
 
 	static ToPosix(_path) => RegExReplace(_path, '[\\\/]+', '/')
 
@@ -57,13 +57,13 @@ class Path {
 		leadingParts := Path.cwd.parts
 
 		if (ascend > 0) {
-			leadingParts := leadingParts.Slice(0, -ascend)
-			parts := parts.Slice(ascend)
+			leadingParts := ArrSlice(leadingParts, 0, -ascend)
+			parts := ArrSlice(parts, ascend)
 		}
 
 		parts.InsertAt(1, leadingParts*)
 
-		return parts.Join(Path.sep)
+		return ArrJoin(parts, Path.sep)
 	}
 
 	static RelativeTo(_dir, _path) => ''	; Reserved
@@ -93,7 +93,7 @@ class Path {
 
 	; ToString() => this.path
 
-	Ascend(_ascend := 1) => Path(this.parts.Slice(0, -_ascend)*)
+	Ascend(_ascend := 1) => Path(ArrSlice(this.parts, 0, -_ascend)*)
 
 	GetParent() => this.Ascend()
 

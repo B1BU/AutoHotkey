@@ -2,8 +2,7 @@
 
 #Include Path.ahk
 
-#Include ..\Extensions\Built-In.ahk
-#Include ..\Extensions\Array.ahk
+#Include Extensions.ahk
 
 PlaySound(sound) {
 	_SoundExts := ['wav', 'mp3', 'ogg']
@@ -15,7 +14,7 @@ PlaySound(sound) {
 	}
 
 	if (sound.ext) {
-		if not (_SoundExts.Contains(sound.ext)) {
+		if not (InArray(_SoundExts, sound.ext)) {
 			return
 		}
 

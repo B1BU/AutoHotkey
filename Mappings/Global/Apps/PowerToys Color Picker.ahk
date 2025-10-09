@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\..\Extensions\Object.ahk
+#Include ..\..\..\Libraries\Extensions.ahk
 
 class ColorPicker {
 	static title := 'ahk_exe PowerToys.ColorPickerUI.exe'
@@ -35,7 +35,7 @@ class ColorPicker {
 	}
 
 	static GetFormat(format) {
-		function := this.Formatting.Get(format) or function := this.Formatting.Get(this.defaultFormat)
+		function := ObjGet(this.Formatting, format) or function := ObjGet(this.Formatting, this.defaultFormat)
 		result := function(this)
 		return result
 	}

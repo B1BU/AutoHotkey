@@ -1,7 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Extensions\Built-In.ahk
-#Include ..\Extensions\Array.ahk
+#Include Extensions.ahk
 
 class Cmd {
 	static Open(adm := false, args := '') {
@@ -19,7 +18,7 @@ class Cmd {
 			return
 		}
 
-		args := (commands) ? ' /C ' commands.Join(' & ') : ''
+		args := (commands) ? ' /C ' ArrJoin(commands, ' & ') : ''
 
 		Cmd.Open(adm, args)
 	}

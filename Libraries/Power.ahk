@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Extensions\Built-In.ahk
+#Include Extensions.ahk
 
 class Power {
 	static Logoff()   => Shutdown(0)

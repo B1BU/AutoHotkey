@@ -1,7 +1,6 @@
 #Requires AutoHotkey v2.0
 A_MenuMaskKey := 'vkE8'
 
-#Include ..\..\Extensions\Object.ahk
 #Include ..\..\Data\Apps.ahk
 
 class Fortnite {
