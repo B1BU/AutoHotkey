@@ -74,23 +74,3 @@ IsType(obj, check_types*) {
 			return true
 	return false
 }
-
-Profile(function, args := '', calls := 1) {
-	if calls < 1
-		return
-
-	start := A_TickCount
-
-	if args == ''
-		args := []
-
-	loop calls - 1
-		function(args*)
-	result := function(args*)
-	if not IsType(result, String, Integer)
-		result := ''
-
-	miliseconds := A_TickCount - start
-
-	MsgBox(result, function.Name ': ' calls ' function calls in ' miliseconds 'ms')
-}
