@@ -65,12 +65,3 @@ InArray(value, arr) {
 			return true
 	return false
 }
-
-IsType(obj, check_types*) {
-	obj_type := Type(obj)
-
-	for check_type in check_types
-		if obj_type == check_type.Prototype.__Class
-			return true
-	return false
-}

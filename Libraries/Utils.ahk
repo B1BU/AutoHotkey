@@ -23,7 +23,7 @@ Profile(function, args := '', calls := 1) {
 	loop calls - 1
 		function(args*)
 	result := function(args*)
-	if not IsType(result, String, Integer)
+	if result is not String or result is not Integer
 		result := ''
 
 	miliseconds := A_TickCount - start

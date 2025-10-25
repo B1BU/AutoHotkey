@@ -143,19 +143,3 @@ ArrJoin(Arr [, Sep := '']) => String
  * 0
  */
 InArray(Value, Arr) => Integer
-
-/**
- * From `Extensions.ahk`
- *
- * Checks if `Obj` is of any of the specified types.
- * @param {(Object)} Obj
- * An object to check.
- * @param {(Class)} Types
- * One or more classes to check against `Obj`.
- * @example
- * >>> IsType('Example', Array)
- * 0
- * >>> IsType('Example', Integer, String)
- * 1
- */
-IsType(Obj, Types*) => Integer
