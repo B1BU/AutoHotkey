@@ -92,7 +92,7 @@ StrSlice(Str, Start [, Length := '']) => String
  * >>> ObjGet(obj, 'c', 'Not found')
  * 'Not found'
  */
-ObjGet(Obj, Prop [, Default := '']) => Any
+ObjGet(Obj, Prop [, Default := unset]) => Any
 
 /**
  * From `Extensions.ahk`

@@ -16,11 +16,13 @@ StrSlice(str, start, length := '') {
 	return ArrJoin(ArrSlice(StrSplit(str), start, length))
 }
 
-ObjGet(obj, prop, default := '') {
+ObjGet(obj, prop, default := unset) {
 	for key, value in ObjOwnProps(obj)
 		if key == prop
 			return value
-	return default
+
+	if IsSet(default)
+		return default
 }
 
 ArrSlice(arr, start, length := '') {
