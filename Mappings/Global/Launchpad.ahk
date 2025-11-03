@@ -19,7 +19,6 @@ AppsKey & h:: Mudhorn.SSH()          ; SSH into Mudhorn
 ; TaskBarX
 AppsKey & x:: App.TaskBarX.Open()    ; Restart TaskBarX
 
-
 ; Spotify
 Media_Stop:: App.Spotify.Toggle(1)   ; Open / Close Spotify
 ^Media_Stop:: App.Spotify.Minimize() ; Minimize Spotify
@@ -106,3 +105,6 @@ AppsKey & Del:: App.Xbox.Toggle(1)   ; Open / Close Xbox App
 
 ; Modrinth
 AppsKey & m:: App.Modrinth.Toggle(1) ; Open / Close Modrinth
+
+; Krita
+AppsKey & k:: App.Krita.Toggle()     ; Open / Close Krita

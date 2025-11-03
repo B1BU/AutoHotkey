@@ -53,3 +53,6 @@ TaskBarX:
   App + Shift + X        : Restart TaskBarX
 Projects:
   App + H                : SSH into Mudhorn
+
+Krita:
+  App + K                : Open / Close Krita

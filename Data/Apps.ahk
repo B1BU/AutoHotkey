@@ -158,6 +158,12 @@ global App := {
 		}
 	),
 
+	Krita: AppClass(
+		{
+			exe: A_ProgramFiles '\Krita (x64)\bin\krita.exe'
+		}
+	),
+
 	Fusion360: AppClass(
 		{
 			exe: 'fusion360.exe'
