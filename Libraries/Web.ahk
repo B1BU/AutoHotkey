@@ -12,6 +12,7 @@ class Web {
 		if not query
 			return
 
+		query := Trim(query)
 		query := RegExReplace(query, '\s+', '+')
 
 		Run('https://www.google.com/search?q=' query)
