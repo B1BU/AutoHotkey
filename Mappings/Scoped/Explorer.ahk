@@ -1,4 +1,5 @@
 ; ! ADD PASTE AS SHORTCUT
+; ! ADD DUPLICATE FILE
 
 #Requires AutoHotkey v2.0
 #Include ..\..\Libraries\Explorer.ahk
