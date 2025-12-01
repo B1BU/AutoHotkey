@@ -23,7 +23,7 @@ StartOBS() {
 loop {
 	if WinExist(obs_crash_title) {
 		WinWaitClose(obs_crash_title)
-		Sleep(2000)
+		Sleep(10000)
 		StartOBS()
 	}
 	Sleep(3000)
