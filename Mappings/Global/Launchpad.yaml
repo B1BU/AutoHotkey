@@ -1,5 +1,7 @@
 Explorer:
   Win + Shift + E        : Restart Explorer
+Task Manager:
+  Win + Esc              : Open Task Manager
 Calculator:
   Win + F1               : Open / Close Calculator
 CMD:

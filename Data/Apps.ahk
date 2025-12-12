@@ -13,6 +13,13 @@ global App := {
 		}
 	),
 
+	TaskMgr: AppClass(
+		{
+			exe: 'Taskmgr.exe',
+			title: 'ahk_class TaskManagerWindow'
+		}
+	),
+
 	Explorer: AppClass(
 		{
 			exe: 'explorer.exe',

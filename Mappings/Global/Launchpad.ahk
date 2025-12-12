@@ -6,6 +6,9 @@
 ; Explorer
 #+e:: App.Explorer.Restart()         ; Restart Explorer
 
+; Task Manager
+#esc:: App.TaskMgr.Open()          ; Toggle Task Manager
+
 ; CMD
 #':: App.CMD.Open(1)                 ; Open Admin Command Prompt
 #+':: App.CMD.Open()                 ; Open Command Prompt
