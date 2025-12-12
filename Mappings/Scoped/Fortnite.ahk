@@ -89,6 +89,8 @@ FortniteInvGetHover(&row, &slot) {
 
 	!LButton:: Enter
 	!RButton:: Escape
+	!XButton2:: x
+	!XButton1:: c
 
 	; EMOTES
 	~\:: b ; Lobby emote override
