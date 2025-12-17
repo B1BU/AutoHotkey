@@ -7,9 +7,9 @@ FN_INV_SPEC := {
 	hotbar: {
 		offset:    0,
 		x_start:   1200,
-		y_start:   705,
+		y_start:   619,
 		width:     128,
-		height:    129,
+		height:    420,
 		x_spacing: 4,
 		y_spacing: 0,
 		slots: [
