@@ -160,7 +160,7 @@ FortniteInvGetHover(&row, &slot) {
 			Send('{f4}')
 			SetScrollLockState('On')
 		}
-		XButton2 & z:: {
+		XButton2 & g:: {
 			Send('{f5}')
 			SetScrollLockState('On')
 		}
@@ -180,6 +180,5 @@ FortniteInvGetHover(&row, &slot) {
 		x:: Send('{f2}')
 		c:: Send('{f3}')
 		v:: Send('{f4}')
-		z:: Send('{f5}')
-	#HotIf
+		g:: Send('{f5}')
 #HotIf
