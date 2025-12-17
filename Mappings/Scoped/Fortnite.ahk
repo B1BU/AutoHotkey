@@ -115,11 +115,15 @@ FortniteInvGetHover(&row, &slot) {
 	}
 
 	~Tab & RButton:: { ; Drop item
-		if FortniteInvGetHover(&row, &slot) and row == 1 {
-			Send('{Up}{Down}{Up ' row - 1 '}{Right ' slot - 1 '}')
-			Send('{x Down}')
-			KeyWait('RButton')
-			Send('{x Up}')
+		if FortniteInvGetHover(&row, &slot) {
+			if row == 1 {
+				Send('{Up}{Down}{Up ' row - 1 '}{Right ' slot - 1 '}')
+				Send('{x Down}')
+				KeyWait('RButton')
+				Send('{x Up}')
+			} else {
+				Send('{x}')
+			}
 		}
 	}
 
