@@ -1,25 +1,31 @@
 #Requires AutoHotkey v2.0
 
 #Include ..\..\Libraries\Power.ahk
-#Include ..\..\Data\Apps.ahk
 
-#HotIf WinActive(App.Desktop.title)
-	*^CtrlBreak:: {
-		SoundBeep()
-		if GetKeyState('Shift') {
-			Power.RestartToBIOS()
-		} else {
-			Power.Suspend()
-		}
-	}
+^CtrlBreak:: {
+	if KeyWait('CtrlBreak', 'T0.5')
+		return
+	SoundBeep()
 
-	!Pause:: {
-		SoundBeep()
-		Power.Shutdown()
+	if GetKeyState('Shift') {
+		Power.RestartToBIOS()
+	} else {
+		Power.Suspend()
 	}
+}
 
-	+Pause:: {
-		SoundBeep()
-		Power.Restart()
-	}
-#HotIf
+!Pause:: {
+	if KeyWait('Pause', 'T0.5')
+		return
+	SoundBeep()
+
+	Power.Shutdown()
+}
+
++Pause:: {
+	if KeyWait('Pause', 'T0.5')
+		return
+	SoundBeep()
+
+	Power.Restart()
+}
