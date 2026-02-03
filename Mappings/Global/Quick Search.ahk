@@ -2,11 +2,28 @@
 
 #Include ..\..\Libraries\Text.ahk
 #Include ..\..\Libraries\Web.ahk
+#Include ..\..\Data\Apps.ahk
+
+path_steam_library := 'D:\System\Program Data\Steam\Library'
 
 AppsKey & sc073:: {
-	if GetKeyState('Control')
-		return Web.SearchOrOpen(A_Clipboard)
-	Web.SearchOrOpen(GetSelection())
+	input := GetKeyState('Control') ? A_Clipboard : GetSelection()
+
+	if WinActive(App.Steam.title) {
+		if GetKeyState('Shift') {
+			if not query := Web.ToQuery(input)
+				return
+			Web.Open('https://www.steamgriddb.com/search/grids?term=' query)
+
+			out_dir := path_steam_library '\' input
+			DirCreate(out_dir)
+			Run(out_dir)
+
+			return
+		}
+	}
+
+	Web.SearchOrOpen(input)
 }
 
 /*

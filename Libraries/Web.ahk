@@ -8,13 +8,15 @@ class Web {
 
 	static IsUrl(url) => url ~= Web.PATTERN_URL
 
-	static Search(query) {
-		if not query
-			return
-
-		query := Trim(query)
+	static ToQuery(string) {
+		query := Trim(string)
 		query := RegExReplace(query, '\s+', '+')
+		return query
+	}
 
+	static Search(raw_query) {
+		if not query := Web.ToQuery(raw_query)
+			return
 		Run('https://www.google.com/search?q=' query)
 	}
 
