@@ -183,6 +183,12 @@ global App := {
 		}
 	),
 
+	SupermarketSimulator: AppClass(
+		{
+			exe: 'Supermarket Simulator.exe'
+		}
+	),
+
 	Fortnite: AppClass(
 		{
 			exe: 'FortniteClient-Win64-Shipping.exe'
