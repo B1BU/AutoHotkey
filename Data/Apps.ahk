@@ -195,6 +195,12 @@ global App := {
 		}
 	),
 
+	OutlastTrials: AppClass(
+		{
+			exe: 'TOTClient-Win64-Shipping.exe'
+		}
+	),
+
 	HalfLife2: AppClass(
 		{
 			exe: 'hl2.exe',

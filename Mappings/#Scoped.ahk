@@ -8,7 +8,8 @@
 #Include Scoped\ChatGPT.ahk
 #Include Scoped\Magpie.ahk
 #Include Scoped\Fortnite.ahk
+#Include Scoped\The Outlast Trials.ahk
 #Include Scoped\Minecraft.ahk
 #Include Scoped\Peak.ahk
-#Include Scoped\SupermarketSimulator.ahk
+#Include Scoped\Supermarket Simulator.ahk
 #Include Scoped\Half-Life 2.ahk
