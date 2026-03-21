@@ -82,8 +82,8 @@ FortniteInvGetHover(&row, &slot) {
 
 #HotIf WinActive(App.Fortnite.title)
 	; GENERAL
-	Alt:: { ; Prevents autorun from being triggered when pressing alt combos
-		KeyWait('Alt')
+	~LAlt:: { ; Prevents autorun from being triggered when pressing alt combos
+		KeyWait('LAlt')
 		Send('{Up}')
 	}
 
