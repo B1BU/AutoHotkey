@@ -1,0 +1,63 @@
+; Based on code from https://www.autohotkey.com/boards/viewtopic.php?t=131332
+; Assisted by AI
+
+#Requires AutoHotkey v2.0
+
+#Include Extensions.ahk
+#Include Utils.ahk
+
+PNGIcon(icon_path, icon_size := 0) {
+	buf := FileRead(icon_path, 'RAW')
+
+	; Validate PNG signature
+	if (NumGet(buf, 0, "UInt") != 0x474E5089) ; ‰PNG
+		Throw(Error("Not a valid PNG"))
+
+	width  := NumGet(buf, 16, "UInt")
+	height := NumGet(buf, 20, "UInt")
+
+	if (icon_size) {
+		width := height := icon_size
+	}
+
+	return 'HICON:' . DllCall(
+		'CreateIconFromResourceEx',
+		'Ptr', buf,
+		'UInt', buf.Size,
+		'UInt', true,
+		'UInt', 0x30000,
+		'Int', width,
+		'Int', height,
+		'UInt', 0,
+		'Ptr'
+	)
+}
+
+Icon(icon, size := 16) {
+	icons_dir := A_AhkDir . '\Core\Assets\Icons\'
+	dark_icons_dir := icons_dir . 'Dark\'
+
+	SplitPath(icon,,, &ext)
+	if not ext {
+		ext := 'png'
+		icon := icon . '.' . ext
+	}
+
+	if ext == 'png' {
+		if A_DarkMode {
+			icon_path := dark_icons_dir . icon
+			if FileExist(icon_path)
+				return PNGIcon(icon_path, size)
+		}
+
+		icon_path := icons_dir . icon
+		if FileExist(icon_path)
+			return PNGIcon(icon_path, size)
+		return
+	}
+
+	icon_path := icons_dir . icon
+	if FileExist(icon_path)
+		return icon_path
+	return
+}
