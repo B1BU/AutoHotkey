@@ -8,6 +8,8 @@ global A_AppDataRoot     := A_UserProfile '\AppData'
 global A_AppDataLocal    := A_AppDataRoot '\Local'
 global A_AppDataLocalLow := A_AppDataRoot '\LocalLow'
 
+global A_DarkMode        := !RegRead('HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize', 'AppsUseLightTheme')
+
 DirUp(path, levels := 1) {
     Loop levels
         path := RegExReplace(path, "[\\/][^\\/]+$")

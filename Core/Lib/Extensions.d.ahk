@@ -42,6 +42,14 @@ A_AppDataLocal: String
  */
 A_AppDataLocalLow: String
 
+
+/**
+ * From `Extensions.ahk`
+ *
+ * This variable contains the inverted value of the registry `HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize\AppsUseLightTheme`.
+ */
+A_DarkMode: Integer
+
 /**
  * From `Extensions.ahk`
  *
