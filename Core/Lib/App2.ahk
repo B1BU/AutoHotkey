@@ -3,28 +3,24 @@
 #Include ..\..\Core\Lib\Extensions.ahk
 #Include ..\..\Core\Lib\Utils.ahk
 
-_AppResolvePlaceholders(str) {
-	placeholders := Map(
-		'ProgramFiles', A_ProgramFiles,
-		'ProgramFilesx86', A_ProgramFilesx86,
-		'AppData', A_AppData,
-		'AppDataRoot', A_AppDataRoot,
-		'AppDataCommon', A_AppDataCommon,
-		'AppDataLocal', A_AppDataLocal,
-		'AppDataLocalLow', A_AppDataLocalLow,
-		'AppComSpec', A_ComSpec,
-		'AhkDir', A_AhkDir
-	)
-
-	return ResolvePlaceholders(str, placeholders)
-}
+global AppPlaceholders := Map(
+	'ProgramFiles',    A_ProgramFiles,
+	'ProgramFilesx86', A_ProgramFilesx86,
+	'AppData',         A_AppData,
+	'AppDataRoot',     A_AppDataRoot,
+	'AppDataCommon',   A_AppDataCommon,
+	'AppDataLocal',    A_AppDataLocal,
+	'AppDataLocalLow', A_AppDataLocalLow,
+	'AppComSpec',      A_ComSpec,
+	'AhkDir',          A_AhkDir
+)
 
 SetApps(apps_data) {
 	global Apps := apps_data
 	for app, data in apps_data {
-		Apps[app]['exe'] := data.Has('exe') ? _AppResolvePlaceholders(Apps[app]['exe']) : ''
-		Apps[app]['title'] := data.Has('title') ? _AppResolvePlaceholders(Apps[app]['title']) : 'ahk_exe ' . data['exe']
-		Apps[app]['target'] := data.Has('target') ? _AppResolvePlaceholders(Apps[app]['target']) : data['exe']
+		Apps[app]['exe'] := data.Has('exe') ? ResolvePlaceholders(Apps[app]['exe'], AppPlaceholders) : ''
+		Apps[app]['title'] := data.Has('title') ? ResolvePlaceholders(Apps[app]['title'], AppPlaceholders) : 'ahk_exe ' . data['exe']
+		Apps[app]['target'] := data.Has('target') ? ResolvePlaceholders(Apps[app]['target'], AppPlaceholders) : data['exe']
 	}
 }
 
