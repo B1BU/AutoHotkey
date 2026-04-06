@@ -3,5 +3,5 @@
 #NoTrayIcon
 A_MenuMaskKey := 'vkE8'
 
-#Include Mappings\#Global.ahk
-#Include Mappings\#Scoped.ahk
+#Include Binds\#Global.ahk
+#Include Binds\#Scoped.ahk
