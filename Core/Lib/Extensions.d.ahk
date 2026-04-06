@@ -45,6 +45,20 @@ A_AppDataLocalLow: String
 /**
  * From `Extensions.ahk`
  *
+ * Goes up in a provided path.
+ * @param {(Path)} Str
+ * The path to ascend.
+ * @param {(Levels)} Int
+ * How many levels to ascend.
+ * @example
+ * >>> DirUp('Foo\Bar\Script.ahk', 2)
+ * 'Foo\'
+ */
+DirUp(Path, Levels) String
+
+/**
+ * From `Extensions.ahk`
+ *
  * Converts a string to Sentence Case.
  * The first letter of the first word is capitalized.
  * @param {(String)} Str

@@ -8,6 +8,12 @@ global A_AppDataRoot     := A_UserProfile '\AppData'
 global A_AppDataLocal    := A_AppDataRoot '\Local'
 global A_AppDataLocalLow := A_AppDataRoot '\LocalLow'
 
+DirUp(path, levels := 1) {
+    Loop levels
+        path := RegExReplace(path, "[\\/][^\\/]+$")
+    return path
+}
+
 StrSentence(str) {
 	return RegExReplace(str, '^(\PL*\pL)(.*)', '$U1$L2')
 }
