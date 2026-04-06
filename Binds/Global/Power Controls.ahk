@@ -1,31 +1,32 @@
 #Requires AutoHotkey v2.0
 
+#Include ..\..\Core\Lib\Patches.ahk
+#Include ..\..\Core\Lib\Utils.ahk
+#Include ..\..\Core\Lib\Icon.ahk
 #Include ..\..\Core\Lib\Power.ahk
 
-^CtrlBreak:: {
-	if KeyWait('CtrlBreak', 'T0.5')
-		return
-	SoundBeep()
+ShutdownMenu := Menu()
+FillMenu(ShutdownMenu, [
+	{
+		name: 'Shutdown',
+		icon: Icon('Power'),
+		callback: (*) => Power.Shutdown()
+	},
+	{
+		name: 'Suspend',
+		icon: Icon('Moon'),
+		callback: (*) => Power.Suspend()
+	},
+	{
+		name: 'Restart',
+		icon: Icon('RotateCCW'),
+		callback: (*) => Power.Restart()
+	},
+	{
+		name: 'BIOS',
+		icon: Icon('CPU'),
+		callback: (*) => Power.RestartToBIOS()
+	},
+])
 
-	if GetKeyState('Shift') {
-		Power.RestartToBIOS()
-	} else {
-		Power.Suspend()
-	}
-}
-
-!Pause:: {
-	if KeyWait('Pause', 'T0.5')
-		return
-	SoundBeep()
-
-	Power.Shutdown()
-}
-
-+Pause:: {
-	if KeyWait('Pause', 'T0.5')
-		return
-	SoundBeep()
-
-	Power.Restart()
-}
+^CtrlBreak:: ShutdownMenu.Show()
