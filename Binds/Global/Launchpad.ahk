@@ -30,7 +30,7 @@ Media_Stop:: App.Spotify.Toggle(1)   ; Open / Close Spotify
 ; Chrome
 AppsKey & c:: {
 	if !KeyWait('c', 'T2') {
-		App.ChromeBeta.Open          ; Open Chrome Beta
+		App.ChromeBeta.Open()        ; Open Chrome Beta
 	} else {
 		App.Chrome.Open()            ; Open Chrome
 	}
