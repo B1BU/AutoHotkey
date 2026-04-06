@@ -1,3 +1,4 @@
+.vscode/
 User/*
 !User/User Data.txt
 Scripts/Experiments/*
