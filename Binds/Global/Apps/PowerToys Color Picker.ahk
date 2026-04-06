@@ -1,60 +1,115 @@
+; Set format on PowerToys to "#%ReX%GrX%BlX｜%Re %Gr %Bl"
+
 #Requires AutoHotkey v2.0
 
 #Include ..\..\..\Core\Lib\Extensions.ahk
+#Include ..\..\..\Core\Lib\Utils.ahk
 
-class ColorPicker {
+class _ColorPicker {
 	static title := 'ahk_exe PowerToys.ColorPickerUI.exe'
+	static pattern := '^#([0-9A-F]{6})｜(\d{1,3})\s(\d{1,3})\s(\d{1,3})$'
 
-	static defaultFormat := 'hex'
+	static x := ''
+	static r := ''
+	static g := ''
+	static b := ''
 
-	static Formatting := {
-		x:		(this) => this.x,
-		r:		(this) => this.r,
-		g:		(this) => this.g,
-		b:		(this) => this.b,
-		hex:	(this) => '#' this.x,
-		rgb:	(this) => this.r ', ' this.g ', ' this.b
+	static clipboard := ''
+	static selected_format := ''
+
+	static formats := {
+		red:   (this) => this.r,
+		green: (this) => this.g,
+		blue:  (this) => this.b,
+		rgb:   (this) => this.r . ', ' . this.g . ', ' . this.b,
+		hex:   (this) => '#' . this.x,
+		hex2:  (this) => this.x,
 	}
 
-	static OnClose() {
-		if not (RegExMatch(A_Clipboard, '^#([0-9A-F]{6})｜(\d{1,3})\s(\d{1,3})\s(\d{1,3})$', &match)) {
+	static default_format := this.formats.hex
+
+	static IsPicked() {
+		if !this.clipboard
+			return false
+
+		if A_Clipboard == this.clipboard
+			return true
+
+		this.clipboard := ''
+		return false
+	}
+
+	static GetFormat(format := '') {
+		return ObjGet(this.formats, format, this.default_format)(this)
+	}
+
+	static CopyFormat(format := '') {
+		this.clipboard := A_Clipboard := this.GetFormat(format)
+	}
+
+	static ParsePick() {
+		if not (RegExMatch(A_Clipboard, this.pattern, &match))
 			return
-		}
 
 		this.x := match[1]
 		this.r := match[2]
 		this.g := match[3]
 		this.b := match[4]
-
-		A_Clipboard := this.GetFormat(this.format)
 	}
 
-	static Pick(format) {
-		ColorPicker.format := format
-		Send('{Enter}')
-	}
-
-	static GetFormat(format) {
-		function := ObjGet(this.Formatting, format) or function := ObjGet(this.Formatting, this.defaultFormat)
-		result := function(this)
-		return result
+	static OnClose() {
+		this.ParsePick()
+		this.CopyFormat()
 	}
 }
 
-#HotIf (WinExist(ColorPicker.title))
-	h:: ColorPicker.Pick('hex') ; Hex
-	x:: ColorPicker.Pick('x')   ; Hex without #
-	r:: ColorPicker.Pick('r')   ; Red
-	g:: ColorPicker.Pick('g')   ; Green
-	b:: ColorPicker.Pick('b')   ; Blue
-	c:: ColorPicker.Pick('rgb') ; RGB
-#HotIf
-
 _ColorPickerWatcher() {
-	WinWait(ColorPicker.title)
-	ColorPicker.format := ColorPicker.defaultFormat
-	WinWaitClose(ColorPicker.title)
-	ColorPicker.OnClose()
+	WinWait(_ColorPicker.title)
+	WinWaitClose(_ColorPicker.title)
+	_ColorPicker.OnClose()
 }
 
 SetTimer(_ColorPickerWatcher)
+
+_ColorPickerFormatMenu := Menu()
+FillMenu(_ColorPickerFormatMenu, [
+	{
+		name: 'HEX',
+		callback: (*) => _ColorPicker.selected_format := 'hex'
+	},
+	{
+		name: 'HEX value',
+		callback: (*) => _ColorPicker.selected_format := 'hex2'
+	},
+	{
+		name: 'RGB',
+		callback: (*) => _ColorPicker.selected_format := 'rgb'
+	},
+	{
+		name: 'Red',
+		callback: (*) => _ColorPicker.selected_format := 'red'
+	},
+	{
+		name: 'Green',
+		callback: (*) => _ColorPicker.selected_format := 'green'
+	},
+	{
+		name: 'Blue',
+		callback: (*) => _ColorPicker.selected_format := 'blue'
+	},
+])
+
+#!c:: {
+	if !_ColorPicker.IsPicked()
+		return
+	_ColorPickerFormatMenu.Show()
+	_ColorPicker.CopyFormat(_ColorPicker.selected_format)
+}
+
+#!v:: {
+	if !_ColorPicker.IsPicked()
+		return
+	_ColorPickerFormatMenu.Show()
+	_ColorPicker.CopyFormat(_ColorPicker.selected_format)
+	Send('^v')
+}
