@@ -1,113 +1,93 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Apps.ahk
+#Include ..\..\Core\Data\Load\Apps.ahk
 #Include ..\..\User\Servers.ahk
 
-; Explorer
-#+e:: App.Explorer.Restart()         ; Restart Explorer
+#+e:: AppKill('Explorer')              ; Restart Explorer
 
-; Task Manager
-#esc:: App.TaskMgr.Open()          ; Toggle Task Manager
+#esc:: AppToggle('TaskMgr')            ; Toggle Task Manager
 
-; CMD
-#':: App.CMD.Open(1)                 ; Open Admin Command Prompt
-#+':: App.CMD.Open()                 ; Open Command Prompt
+#':: AppRun('CMD', 1)                  ; Open Admin Command Prompt
+#+':: AppRun('CMD')                    ; Open Command Prompt
 
-; Calculator
-#F1:: App.Calc.Toggle(1)             ; Open / Close Calculator
+#F1:: AppToggle('Calc', 1)             ; Open / Close Calculator
 
-; Mudhorn
-AppsKey & h:: Mudhorn.SSH()          ; SSH into Mudhorn
+AppsKey & h:: Mudhorn.SSH()            ; SSH into Mudhorn
 
-; TaskBarX
-AppsKey & x:: App.TaskBarX.Open()    ; Restart TaskBarX
+AppsKey & x:: AppRun('TaskBarX')       ; Restart TaskBarX
 
-; Spotify
-Media_Stop:: App.Spotify.Toggle(1)   ; Open / Close Spotify
-^Media_Stop:: App.Spotify.Minimize() ; Minimize Spotify
-!Media_Stop:: App.Spotify.Kill()     ; Kill Spotify
+Media_Stop:: AppToggle('Spotify', 1)   ; Open / Close Spotify
+^Media_Stop:: AppMinimize('Spotify')   ; Minimize Spotify
+!Media_Stop:: AppKill('Spotify')       ; Kill Spotify
 
-; Chrome
 AppsKey & c:: {
-	if !KeyWait('c', 'T2') {
-		App.ChromeBeta.Open()        ; Open Chrome Beta
+	if (GetKeyState('Shift') and GetKeyState('Alt')) {
+		AppRun('ChromeBeta')           ; Open Chrome Beta
 	} else {
-		App.Chrome.Open()            ; Open Chrome
+		AppRun('Chrome')               ; Open Chrome
 	}
-
-	KeyWait('c')
 }
 
-; Obsidian
-AppsKey & o:: App.Obsidian.Toggle(1) ; Open / Close Obsidian
+AppsKey & o:: AppToggle('Obsidian', 1) ; Open / Close Obsidian
 
-; Notion
 AppsKey & n:: {
 	if (GetKeyState('Alt')) {
-		App.Notion.Kill()            ; Kill Notion
+		AppKill('Notion')              ; Kill Notion
 	} else {
-		App.Notion.Toggle(1)         ; Open / Close Notion
+		AppToggle('Notion', 1)         ; Open / Close Notion
 	}
 }
 
-; Chat GPT
 AppsKey & g:: {
 	if (GetKeyState('Control')) {
-		App.ChatGPT.Close()          ; Close ChatGPT
+		AppClose('ChatGPT')            ; Close ChatGPT
 	} else if (GetKeyState('Shift')) {
-		App.ChatGPT.Open()           ; Open ChatGPT
+		AppRun('ChatGPT')              ; Open ChatGPT
 	} else {
-		App.ChatGPT.Toggle()         ; Open / Minimize ChatGPT
+		AppToggle('ChatGPT')           ; Open / Minimize ChatGPT
 	}
 }
 
-; VSCode
-AppsKey & v:: App.VSCode.Open()      ; Open VSCode
+AppsKey & v:: AppRun('VSCode')         ; Open VSCode
 
 AppsKey & d:: {
 	if (GetKeyState('Alt')) {
-		App.Discord.Kill()           ; Kill Discord
+		AppKill('Discord')             ; Kill Discord
 	} else if (GetKeyState('Control')) {
-		App.Discord.Close()          ; Close Discord
+		AppClose('Discord')            ; Close Discord
 	} else {
-		App.Discord.Toggle()         ; Open / Minimize Discord
+		AppToggle('Discord')           ; Open / Minimize Discord
 	}
 }
 
-; WhatsApp
-AppsKey & w:: App.WhatsApp.Toggle(1) ; Open / Close WhatsApp
+AppsKey & w:: AppToggle('WhatsApp', 1) ; Open / Close WhatsApp
 
-; Steam
 AppsKey & Home:: {
 	if (GetKeyState('Alt')) {
-		App.Steam.Kill()             ; Kill Steam
+		AppKill('Steam')               ; Kill Steam
 	} else if (GetKeyState('Control')) {
-		App.Steam.Close()            ; Close Steam
+		AppClose('Steam')              ; Close Steam
 	} else if (GetKeyState('Shift')) {
-		App.SteamBP.Toggle(1)        ; Open / Close Steam Big Picture
+		AppToggle('SteamBP', 1)        ; Open / Close Steam Big Picture
 	} else {
-		if (WinActive(App.Steam.title)) {
-			App.SteamBP.Toggle(1)    ; Open / Close Steam Big Picture
+		if (WinActive(Apps['Steam']['title'])) {
+			AppToggle('SteamBP', 1)    ; Open / Close Steam Big Picture
 		} else {
-			App.Steam.Open()         ; Open Steam
+			AppRun('Steam')            ; Open Steam
 		}
 	}
 }
 
-; Epic Games
 AppsKey & End:: {
 	if (GetKeyState('Alt')) {
-		App.Epic.Kill()              ; Kill Epic Games
+		AppKill('Epic')                ; Kill Epic Games
 	} else {
-		App.Epic.Toggle(1)           ; Open / Close Epic Games
+		AppToggle('Epic', 1)           ; Open / Close Epic Games
 	}
 }
 
-; Xbox
-AppsKey & Del:: App.Xbox.Toggle(1)   ; Open / Close Xbox App
+AppsKey & Del:: AppToggle('Xbox', 1)   ; Open / Close Xbox App
 
-; Modrinth
-AppsKey & m:: App.Modrinth.Toggle(1) ; Open / Close Modrinth
+AppsKey & m:: AppToggle('Modrinth', 1) ; Open / Close Modrinth
 
-; Krita
-AppsKey & k:: App.Krita.Toggle()     ; Open / Close Krita
+AppsKey & k:: AppToggle('Krita')       ; Open / Close Krita

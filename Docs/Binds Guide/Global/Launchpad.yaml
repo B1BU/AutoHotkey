@@ -10,7 +10,7 @@ CMD:
 
 Chrome:
   App + C                : Open Chrome
-  App + C (Hold 3s)      : Open Chrome Beta
+  App + Shift + Alt  + C : Open Chrome Beta
 
 Discord:
   App + D                : Open / Minimize Discord
