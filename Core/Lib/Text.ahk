@@ -4,7 +4,7 @@ Write(str) {
 	prev_clipboard := ClipboardAll()
 		A_Clipboard := str
 		Send('^v')
-		Sleep(20)
+		Sleep(25)
 	A_Clipboard := prev_clipboard
 }
 
