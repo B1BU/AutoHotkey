@@ -1,12 +1,9 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\..\Core\Lib\Sound.ahk
+#Include ..\..\..\Core\Lib\Utils.ahk
+#Include ..\..\..\Core\Data\Load\Apps.ahk
 #Include ..\..\..\Core\Lib\VSCode.ahk
-#Include ..\..\..\Core\Data\Apps.ahk
-
-Ralt & v:: VSCode.Open(A_ScriptDir) ; Edit AutoHotkey folder
-
-Ralt & e:: Run(A_ScriptDir)         ; Open AutoHotkey folder
+#Include ..\..\..\Core\Lib\Sound.ahk
 
 RAlt & F5:: {                       ; Reload Autohotkey script
 	PlaySound('beeplow')
@@ -17,5 +14,11 @@ RAlt & F5:: {                       ; Reload Autohotkey script
 RAlt & F4:: {                       ; Kill AutoHotkey
 	PlaySound('beeplow')
 	Sleep(250)
-	App.AHK.kill()
+	AppKill('AHK')
 }
+
+RAlt & e:: Run(A_AhkDir)            ; Open AutoHotkey folder
+
+RAlt & v:: VSCode.Open(A_AhkDir)    ; Edit AutoHotkey folder
+
+RAlt & s:: AppRun('AHKSpy')         ; Open AutoHotkey Window Spy
