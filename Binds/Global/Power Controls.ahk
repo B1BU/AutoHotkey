@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Libraries\Power.ahk
+#Include ..\..\Core\Lib\Power.ahk
 
 ^CtrlBreak:: {
 	if KeyWait('CtrlBreak', 'T0.5')

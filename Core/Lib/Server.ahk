@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Libraries\CMD.ahk
+#Include ..\Lib\CMD.ahk
 
 class Server {
 	__New(address, username, password) {

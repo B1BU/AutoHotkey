@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Data\Apps.ahk
-#Include ..\..\Data\Private\Servers.ahk
+#Include ..\..\Core\Data\Apps.ahk
+#Include ..\..\User\Servers.ahk
 
 ; Explorer
 #+e:: App.Explorer.Restart()         ; Restart Explorer

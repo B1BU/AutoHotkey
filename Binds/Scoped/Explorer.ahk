@@ -2,8 +2,8 @@
 ; ! ADD DUPLICATE FILE
 
 #Requires AutoHotkey v2.0
-#Include ..\..\Libraries\Explorer.ahk
-#Include ..\..\Data\Apps.ahk
+#Include ..\..\Core\Lib\Explorer.ahk
+#Include ..\..\Core\Data\Apps.ahk
 
 #HotIf WinActive(App.Explorer.title) ; Explorer
 	Home::  !Up   ; Go up

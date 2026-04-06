@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 A_MenuMaskKey := 'vkE8'
 
-#Include ..\..\Data\Apps.ahk
+#Include ..\..\Core\Data\Apps.ahk
 
 FN_INV_SPEC := {
 	hotbar: {

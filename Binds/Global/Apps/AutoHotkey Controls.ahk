@@ -1,8 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\..\Libraries\Sound.ahk
-#Include ..\..\..\Libraries\VSCode.ahk
-#Include ..\..\..\Data\Apps.ahk
+#Include ..\..\..\Core\Lib\Sound.ahk
+#Include ..\..\..\Core\Lib\VSCode.ahk
+#Include ..\..\..\Core\Data\Apps.ahk
 
 Ralt & v:: VSCode.Open(A_ScriptDir) ; Edit AutoHotkey folder
 

@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\..\Libraries\Extensions.ahk
+#Include ..\..\..\Core\Lib\Extensions.ahk
 
 class ColorPicker {
 	static title := 'ahk_exe PowerToys.ColorPickerUI.exe'

@@ -1,3 +1,4 @@
-Data/Private
-Experiments/
+User/*
+!User/User Data.txt
+Scripts/Experiments/*
 TODO.md

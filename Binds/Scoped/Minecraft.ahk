@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Libraries\Text.ahk
-#Include ..\..\Data\Apps.ahk
+#Include ..\..\Core\Lib\Text.ahk
+#Include ..\..\Core\Data\Apps.ahk
 
 class Minecraft {
 	static Send(text) {

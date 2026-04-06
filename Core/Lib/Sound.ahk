@@ -10,7 +10,7 @@ PlaySound(sound) {
 	sound := Path(sound)
 
 	if not (sound.IsAbs()) {
-		sound := Path(A_ScriptDir, 'Data/Sounds', sound.path)
+		sound := Path(A_ScriptDir, 'Core/Assets/Sounds', sound.path)
 	}
 
 	if (sound.ext) {

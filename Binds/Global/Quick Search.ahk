@@ -1,10 +1,10 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Libraries\Text.ahk
-#Include ..\..\Libraries\Web.ahk
-#Include ..\..\Data\Apps.ahk
+#Include ..\..\Core\Lib\Text.ahk
+#Include ..\..\Core\Lib\Web.ahk
+#Include ..\..\Core\Data\Apps.ahk
 
-path_steam_library := 'D:\System\Program Data\Steam\Library'
+path_steam_library := 'D:\System\Program Data\Steam\Core\Library'
 
 AppsKey & sc073:: {
 	input := GetKeyState('Control') ? A_Clipboard : GetSelection()
