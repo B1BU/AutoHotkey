@@ -21,3 +21,7 @@ FillMenu(menu, items) {
 			menu.SetIcon(item.name, item.icon)
 	}
 }
+
+ResolvePlaceholders(str, placeholders) {
+	return RegExReplace(str, "\$\{(\w+)\}", (match) => placeholders.Get(match[1], ''))
+}
