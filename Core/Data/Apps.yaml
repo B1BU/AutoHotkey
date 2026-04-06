@@ -1,131 +1,115 @@
-AHK:
-  exe: AutoHotkey64.exe
-
-TaskMgr:
-  exe: Taskmgr.exe
-  title: ahk_class TaskManagerWindow
-
+# Windows
 Explorer:
   exe: explorer.exe
   title: ahk_class CabinetWClass
-
 Desktop:
   title: ahk_class WorkerW
-
 CMD:
   exe: cmd.exe
-
 PowerShell:
   exe: powershell.exe
-
+TaskMgr:
+  exe: Taskmgr.exe
+  title: ahk_class TaskManagerWindow
 Calc:
   exe: calc.exe
-  title: Calculadora
+  title: Calc ahk_exe ApplicationFrameHost.exe
 
-VSCode:
-  exe: Code.exe
-  target: ${AppDataLocal}\Programs\Microsoft VS Code\Code.exe
-
+# Browsing
 Chrome:
   exe: chrome.exe
   title: Google Chrome ahk_class Chrome_WidgetWin_1
   target: ${ProgramFiles}\Google\Chrome\Application\chrome.exe
-
 ChromeBeta:
   exe: chrome.exe
   title: Google Chrome ahk_class Chrome_WidgetWin_1
   target: ${ProgramFiles}\Google\Chrome Beta\Application\chrome.exe
 
+# AI Assistants
+ChatGPT:
+  title: ChatGPT ahk_class Chrome_WidgetWin_1
+  target: '"${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg'
 Gemini:
   title: Gemini ahk_class Chrome_WidgetWin_1
   target: '"${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe" --profile-directory=Default --app-id=pificchcdfpinjikejhcfjobjdhcedjj'
 
-
-ChatGPT:
-  title: ChatGPT ahk_class Chrome_WidgetWin_1
-  target: '"${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg'
-
+# Tools
+VSCode:
+  exe: Code.exe
+  target: ${AppDataLocal}\Programs\Microsoft VS Code\Code.exe
 Obsidian:
   exe: Obsidian.exe
   target: ${ProgramFiles}\Obsidian\Obsidian.exe
-
 Notion:
   exe: Notion.exe
   target: ${AppDataLocal}\Programs\Notion\Notion.exe
+Fusion360:
+  exe: fusion360.exe
+Blockbench:
+  exe: Blockbench.exe
+Audacity:
+  exe: audacity.exe
+Krita:
+  exe: ${ProgramFiles}\Krita (x64)\bin\krita.exe
+OBS:
+  exe: obs64.exe
 
+# Programs
+AHK:
+  exe: AutoHotkey64.exe
+AHKSpy:
+  exe: WindowSpy.ahk
+  target: ${ProgramFiles}\AutoHotkey\UX\WindowSpy.ahk
+TaskBarX:
+  target: D:\System\Programs\TaskbarX\TaskbarX.exe
+Magpie:
+  exe: Magpie.exe
+  target: D:\System\Programs\Magpie-v0.11.1-x64\Magpie.exe
+
+# Comms
 Discord:
   exe: Discord.exe
   target: '"${AppDataLocal}\Discord\Update.exe" --processStart Discord.exe'
-
 WhatsApp:
   title: WhatsApp
   target: shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App
 
+# Media
 Spotify:
   exe: Spotify.exe
 
+# Game platforms
 Steam:
   exe: Steam.exe
   title: ahk_exe steamwebhelper.exe
   target: ${ProgramFilesx86}\Steam\steam.exe
-
 SteamBP:
   exe: steamwebhelper.exe
   title: Big Picture ahk_exe steamwebhelper.exe
   target: steam:\\open\bigpicture
-
 Epic:
   exe: EpicGamesLauncher.exe
   target: ${ProgramFiles}\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe
-
 Xbox:
   title: Xbox
   target: shell:AppsFolder\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App
 
-OBS:
-  exe: obs64.exe
-
-Audacity:
-  exe: audacity.exe
-
-Krita:
-  exe: ${ProgramFiles}\Krita (x64)\bin\krita.exe
-
-Fusion360:
-  exe: fusion360.exe
-
-Blockbench:
-  exe: Blockbench.exe
-
+# Games
 SupermarketSimulator:
   exe: Supermarket Simulator.exe
-
 Fortnite:
   exe: FortniteClient-Win64-Shipping.exe
-
 OutlastTrials:
   exe: TOTClient-Win64-Shipping.exe
-
 HalfLife2:
   exe: hl2.exe
   title: Half-Life 2 ahk_exe hl2.exe
-
 Modrinth:
   exe: Modrinth App.exe
   target: ${AppDataLocal}\Modrinth App\Modrinth App.exe
-
 Minecraft:
   title: Minecraft ahk_class GLFW30
-
 Peak:
   title: PEAK ahk_class UnityWndClass
-
 HARDCODED:
   title: HARDCODED
-
-TaskBarX:
-  target: D:\System\Programs\TaskbarX\TaskbarX.exe
-
-Magpie:
-  exe: Magpie.exe
-  target: D:\System\Programs\Magpie-v0.11.1-x64\Magpie.exe
