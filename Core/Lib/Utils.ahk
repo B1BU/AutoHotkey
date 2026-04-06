@@ -13,6 +13,15 @@ Spam(time, func, args*) {
 	}
 }
 
+FillMenu(menu, items) {
+	for item in items {
+		menu.Add(item.name, item.callback)
+
+		if HasProp(item, 'icon')
+			menu.SetIcon(item.name, item.icon)
+	}
+}
+
 Profile(function, args := '', calls := 1) {
 	if calls < 1
 		return
