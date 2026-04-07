@@ -5,20 +5,20 @@
 #Include ..\..\..\Core\Lib\VSCode.ahk
 #Include ..\..\..\Core\Lib\Sound.ahk
 
-RAlt & F5:: {                       ; Reload Autohotkey script
+RAlt & F5:: {                    ; Reload Autohotkey script
 	PlaySound('beeplow')
 	Sleep(250)
 	Run(A_ScriptFullPath)
 }
 
-RAlt & F4:: {                       ; Kill AutoHotkey
+RAlt & F4:: {                    ; Kill AutoHotkey
 	PlaySound('beeplow')
 	Sleep(250)
-	AppKill('AHK')
+	Apps['AHK'].Kill()
 }
 
-RAlt & e:: Run(A_AhkDir)            ; Open AutoHotkey folder
+RAlt & e:: Run(A_AhkDir)         ; Open AutoHotkey folder
 
-RAlt & v:: VSCode.Open(A_AhkDir)    ; Edit AutoHotkey folder
+RAlt & v:: VSCode.Open(A_AhkDir) ; Edit AutoHotkey folder
 
-RAlt & s:: AppRun('AHKSpy')         ; Open AutoHotkey Window Spy
+RAlt & s:: Apps['AHKSpy'].Run()   ; Open AutoHotkey Window Spy

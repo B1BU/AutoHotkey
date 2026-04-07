@@ -1,26 +1,26 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Lib\Extensions.ahk
-#Include ..\Lib\App.ahk
-#Include ..\Lib\Explorer.ahk
-#Include ..\Lib\CMD.ahk
-#Include ..\Lib\VSCode.ahk
+#Include ..\..\Lib\Extensions.ahk
+#Include ..\..\Lib\Deprecated\App.ahk
+#Include ..\..\Lib\Explorer.ahk
+#Include ..\..\Lib\CMD.ahk
+#Include ..\..\Lib\VSCode.ahk
 
-global App := {
-	AHK: AppClass(
+global DeprecatedApp := {
+	AHK: DeprecatedAppClass(
 		{
 			exe: 'AutoHotkey64.exe'
 		}
 	),
 
-	TaskMgr: AppClass(
+	TaskMgr: DeprecatedAppClass(
 		{
 			exe: 'Taskmgr.exe',
 			title: 'ahk_class TaskManagerWindow'
 		}
 	),
 
-	Explorer: AppClass(
+	Explorer: DeprecatedAppClass(
 		{
 			exe: 'explorer.exe',
 			title: 'ahk_class CabinetWClass',
@@ -28,33 +28,33 @@ global App := {
 		}
 	),
 
-	Desktop: AppClass(
+	Desktop: DeprecatedAppClass(
 		{
 			title: 'ahk_class WorkerW'
 		}
 	),
 
-	CMD: AppClass(
+	CMD: DeprecatedAppClass(
 		{
 			exe: 'cmd.exe',
 			Open: Cmd.Open
 		}
 	),
 
-	PowerShell: AppClass(
+	PowerShell: DeprecatedAppClass(
 		{
 			exe: 'powershell.exe'
 		}
 	),
 
-	Calc: AppClass(
+	Calc: DeprecatedAppClass(
 		{
 			exe: 'calc.exe',
 			title: 'Calculadora'
 		}
 	),
 
-	VSCode: AppClass(
+	VSCode: DeprecatedAppClass(
 		{
 			exe: 'Code.exe',
 			target: A_AppDataLocal '\Programs\Microsoft VS Code\Code.exe',
@@ -62,19 +62,19 @@ global App := {
 		}
 	),
 
-	Chrome: AppClass(
+	Chrome: DeprecatedAppClass(
 		{
 			target: A_ProgramFiles '\Google\Chrome\Application\chrome.exe'
 		}
 	),
 
-	ChromeBeta: AppClass(
+	ChromeBeta: DeprecatedAppClass(
 		{
 			target: A_ProgramFiles '\Google\Chrome Beta\Application\chrome.exe'
 		}
 	),
 
-	Gemini: AppClass(
+	Gemini: DeprecatedAppClass(
 		{
 			title: 'Gemini ahk_class Chrome_WidgetWin_1',
 			target: '"' A_ProgramFiles '\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=pificchcdfpinjikejhcfjobjdhcedjj'
@@ -82,48 +82,48 @@ global App := {
 		}
 	),
 
-	ChatGPT: AppClass(
+	ChatGPT: DeprecatedAppClass(
 		{
 			title: 'ChatGPT ahk_class Chrome_WidgetWin_1',
 			target: '"' A_ProgramFiles '\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg'
 		}
 	),
 
-	Obsidian: AppClass(
+	Obsidian: DeprecatedAppClass(
 		{
 			exe: 'Obsidian.exe',
 			target: A_ProgramFiles '\Obsidian\Obsidian.exe'
 		}
 	),
 
-	Notion: AppClass(
+	Notion: DeprecatedAppClass(
 		{
 			exe: 'Notion.exe',
 			target: A_AppDataLocal '\Programs\Notion\Notion.exe'
 		}
 	),
 
-	Discord: AppClass(
+	Discord: DeprecatedAppClass(
 		{
 			exe: 'Discord.exe',
 			target: '"' A_AppDataLocal '\Discord\Update.exe" --processStart Discord.exe'
 		}
 	),
 
-	WhatsApp: AppClass(
+	WhatsApp: DeprecatedAppClass(
 		{
 			title: 'WhatsApp',
 			target: 'shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App'
 		}
 	),
 
-	Spotify: AppClass(
+	Spotify: DeprecatedAppClass(
 		{
 			exe: 'Spotify.exe'
 		}
 	),
 
-	Steam: AppClass(
+	Steam: DeprecatedAppClass(
 		{
 			exe: 'Steam.exe',
 			title: 'ahk_exe steamwebhelper.exe',
@@ -131,7 +131,7 @@ global App := {
 		}
 	),
 
-	SteamBP: AppClass(
+	SteamBP: DeprecatedAppClass(
 		{
 			exe: 'steamwebhelper.exe',
 			title: 'Big Picture ahk_exe steamwebhelper.exe',
@@ -139,101 +139,107 @@ global App := {
 		}
 	),
 
-	Epic: AppClass(
+	Epic: DeprecatedAppClass(
 		{
 			exe: 'EpicGamesLauncher.exe',
 			target: A_ProgramFilesx86 '\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe'
 		}
 	),
 
-	Xbox: AppClass(
+	Xbox: DeprecatedAppClass(
 		{
 			title: 'Xbox',
 			target: 'shell:AppsFolder\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App'
 		}
 	),
 
-	OBS: AppClass(
+	OBS: DeprecatedAppClass(
 		{
 			exe: 'obs64.exe'
 		}
 	),
 
-	Audacity: AppClass(
+	Audacity: DeprecatedAppClass(
 		{
 			exe: 'audacity.exe'
 		}
 	),
 
-	Krita: AppClass(
+	Krita: DeprecatedAppClass(
 		{
 			exe: A_ProgramFiles '\Krita (x64)\bin\krita.exe'
 		}
 	),
 
-	Fusion360: AppClass(
+	Fusion360: DeprecatedAppClass(
 		{
 			exe: 'fusion360.exe'
 		}
 	),
 
-	Blockbench: AppClass(
+	Blockbench: DeprecatedAppClass(
 		{
 			exe: 'Blockbench.exe'
 		}
 	),
 
-	SupermarketSimulator: AppClass(
+	SupermarketSimulator: DeprecatedAppClass(
 		{
 			exe: 'Supermarket Simulator.exe'
 		}
 	),
 
-	Fortnite: AppClass(
+	Fortnite: DeprecatedAppClass(
 		{
 			exe: 'FortniteClient-Win64-Shipping.exe'
 		}
 	),
 
-	OutlastTrials: AppClass(
+	OutlastTrials: DeprecatedAppClass(
 		{
 			exe: 'TOTClient-Win64-Shipping.exe'
 		}
 	),
 
-	HalfLife2: AppClass(
+	HalfLife2: DeprecatedAppClass(
 		{
 			exe: 'hl2.exe',
 			title: 'Half-Life 2 ahk_exe hl2.exe'
 		}
 	),
 
-	Modrinth: AppClass(
+	Modrinth: DeprecatedAppClass(
 		{
-			exe: 'Modrinth App.exe',
-			target: A_AppDataLocal '\Modrinth App\Modrinth App.exe'
+			exe: 'Modrinth DeprecatedApp.exe',
+			target: A_AppDataLocal '\Modrinth App\Modrinth DeprecatedApp.exe'
 		}
 	),
 
-	Minecraft: AppClass(
+	Minecraft: DeprecatedAppClass(
 		{
 			title: 'Minecraft ahk_class GLFW30'
 		}
 	),
 
-	Peak: AppClass(
+	Peak: DeprecatedAppClass(
 		{
 			title: 'PEAK ahk_class UnityWndClass'
 		}
 	),
 
-	TaskBarX: AppClass(
+	HARDCODED: DeprecatedAppClass(
+		{
+			title: 'HARDCODED'
+		}
+	),
+
+	TaskBarX: DeprecatedAppClass(
 		{
 			target: 'D:\System\Programs\TaskbarX\TaskbarX.exe'
 		}
 	),
 
-	Magpie: AppClass(
+	Magpie: DeprecatedAppClass(
 		{
 			exe: 'Magpie.exe',
 			target: 'D:\System\Programs\Magpie-v0.11.1-x64\Magpie.exe'

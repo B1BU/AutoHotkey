@@ -2,9 +2,9 @@
 
 #Include ..\Lib\External\Yaml.ahk
 #Include ..\Lib\Utils.ahk
-#Include ..\Lib\App2.ahk
+#Include ..\Lib\App.ahk
 
-global Apps := ParseAppsMap(Yaml(A_AhkDir . '/Core/Data/Apps.yaml')[1])
+global Apps := AppMap(Yaml(A_AhkDir . '/Core/Data/Apps.yaml')[1])
 
 /*
 	[/Core/Data/Apps.yaml]

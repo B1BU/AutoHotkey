@@ -1,8 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Apps.ahk
+#Include ..\..\Core\Data\Deprecated\Apps.ahk
 
-#HotIf (WinActive(App.OutlastTrials.title))
+#HotIf (WinActive(DeprecatedApp.OutlastTrials.title))
 	!LButton:: Send('{Enter}')
 	!RButton:: Send('{Escape}')
 	~LAlt:: w

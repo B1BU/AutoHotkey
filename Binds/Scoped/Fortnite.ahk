@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 A_MenuMaskKey := 'vkE8'
 
-#Include ..\..\Core\Data\Apps.ahk
+#Include ..\..\Core\Data\Deprecated\Apps.ahk
 
 FN_INV_SPEC := {
 	hotbar: {
@@ -80,7 +80,7 @@ FortniteInvGetHover(&row, &slot) {
 	return true
 }
 
-#HotIf WinActive(App.Fortnite.title)
+#HotIf WinActive(DeprecatedApp.Fortnite.title)
 	; GENERAL
 	~LAlt:: { ; Prevents autorun from being triggered when pressing alt combos
 		KeyWait('LAlt')
@@ -136,7 +136,7 @@ FortniteInvGetHover(&row, &slot) {
 	}
 
 	; BUILDING
-	#HotIf WinActive(App.Fortnite.title) and not GetKeyState('ScrollLock', 'T')
+	#HotIf WinActive(DeprecatedApp.Fortnite.title) and not GetKeyState('ScrollLock', 'T')
 		XButton2 & q:: {
 			SetScrollLockState('On')
 			Send('{m}')
@@ -164,7 +164,7 @@ FortniteInvGetHover(&row, &slot) {
 			Send('{f5}')
 			SetScrollLockState('On')
 		}
-	#HotIf WinActive(App.Fortnite.title) and GetKeyState('ScrollLock', 'T')
+	#HotIf WinActive(DeprecatedApp.Fortnite.title) and GetKeyState('ScrollLock', 'T')
 		~WheelDown:: SetScrollLockState('Off')
 		~WheelUp:: SetScrollLockState('Off')
 		~XButton1:: SetScrollLockState('Off')

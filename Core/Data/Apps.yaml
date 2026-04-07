@@ -105,8 +105,8 @@ HalfLife2:
   exe: hl2.exe
   title: Half-Life 2 ahk_exe hl2.exe
 Modrinth:
-  exe: Modrinth App.exe
-  target: ${AppDataLocal}\Modrinth App\Modrinth App.exe
+  exe: Modrinth DeprecatedApp.exe
+  target: ${AppDataLocal}\Modrinth App\Modrinth DeprecatedApp.exe
 Minecraft:
   title: Minecraft ahk_class GLFW30
 Peak:

@@ -7,7 +7,7 @@ class VSCode {
 	static Open(path := '') {
 		args := (path) ? ' "' path  '"' : ''
 		RunAs(Creds['username'], Creds['password'])
-			Run(Apps['VSCode']['target'] args)
+			Run(Apps['VSCode'].target args)
 		RunAs()
 	}
 }
