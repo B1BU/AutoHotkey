@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Load\Apps.ahk
 #Include ..\..\User\Servers.ahk
+#Include ..\..\Core\Set\Apps.ahk
 
 #+e:: AppKill('Explorer')              ; Restart Explorer
 

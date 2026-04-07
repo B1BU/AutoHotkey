@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
+#Include ..\..\..\Core\Set\Apps.ahk
 #Include ..\..\..\Core\Lib\Utils.ahk
-#Include ..\..\..\Core\Data\Load\Apps.ahk
 #Include ..\..\..\Core\Lib\VSCode.ahk
 #Include ..\..\..\Core\Lib\Sound.ahk
 
