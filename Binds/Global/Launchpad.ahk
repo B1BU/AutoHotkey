@@ -1,6 +1,5 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\User\Servers.ahk
 #Include ..\..\Core\Set\Apps.ahk
 
 #+e:: AppKill('Explorer')              ; Restart Explorer
@@ -11,8 +10,6 @@
 #+':: AppRun('CMD')                    ; Open Command Prompt
 
 #F1:: AppToggle('Calc', 1)             ; Open / Close Calculator
-
-AppsKey & h:: Mudhorn.SSH()            ; SSH into Mudhorn
 
 AppsKey & x:: AppRun('TaskBarX')       ; Restart TaskBarX
 
