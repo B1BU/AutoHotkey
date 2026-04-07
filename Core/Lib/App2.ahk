@@ -15,13 +15,14 @@ global AppPlaceholders := Map(
 	'AhkDir',          A_AhkDir
 )
 
-SetApps(apps_data) {
-	global Apps := apps_data
-	for app, data in apps_data {
-		Apps[app]['exe'] := data.Has('exe') ? ResolvePlaceholders(Apps[app]['exe'], AppPlaceholders) : ''
-		Apps[app]['title'] := data.Has('title') ? ResolvePlaceholders(Apps[app]['title'], AppPlaceholders) : 'ahk_exe ' . data['exe']
-		Apps[app]['target'] := data.Has('target') ? ResolvePlaceholders(Apps[app]['target'], AppPlaceholders) : data['exe']
+ParseAppsMap(apps_map) {
+	new_apps_map := apps_map
+	for app, data in apps_map {
+		new_apps_map[app]['exe']    := data.Has('exe')    ? ResolvePlaceholders(new_apps_map[app]['exe'],    AppPlaceholders) : ''
+		new_apps_map[app]['title']  := data.Has('title')  ? ResolvePlaceholders(new_apps_map[app]['title'],  AppPlaceholders) : 'ahk_exe ' . data['exe']
+		new_apps_map[app]['target'] := data.Has('target') ? ResolvePlaceholders(new_apps_map[app]['target'], AppPlaceholders) : data['exe']
 	}
+	return apps_map
 }
 
 AppCheck(app) {
