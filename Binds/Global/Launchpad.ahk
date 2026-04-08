@@ -9,7 +9,7 @@
 #':: Apps['CMD'].Run(,1)                 ; Open Admin Command Prompt
 #+':: Apps['CMD'].Run()                  ; Open Command Prompt
 
-#F1:: Apps['Calc'].Toggle()              ; Open / Close Calculator
+#F1:: Apps['Calc'].Toggle(1)             ; Open / Close Calculator
 
 AppsKey & x:: Apps['TaskBarX'].Kill()    ; Restart TaskBarX
 
