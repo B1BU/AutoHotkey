@@ -80,7 +80,7 @@ FillMenu(_ColorPickerFormatMenu, [
 		callback: (*) => _ColorPicker.selected_format := 'hex'
 	},
 	{
-		name: 'HEX value',
+		name: 'HEX Value',
 		callback: (*) => _ColorPicker.selected_format := 'hex2'
 	},
 	{
