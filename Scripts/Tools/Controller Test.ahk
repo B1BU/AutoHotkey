@@ -67,6 +67,6 @@ Loop {
     if InStr(cont_info, "P")
         axis_info .= "  POV" Round(GetKeyState(ControllerNumber "JoyPOV"))
     E.Value := cont_name " (#" ControllerNumber "):`n" axis_info "`nButtons Down: " buttons_down
-    Sleep 100
+    Sleep(100)
 }
 return
