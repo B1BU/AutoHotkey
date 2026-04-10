@@ -3,14 +3,14 @@
 #Include ..\..\
 #Include Core\Lib\Text.ahk
 #Include Core\Lib\Web.ahk
-#Include Core\Data\Deprecated\Apps.ahk
+#Include Core\Set\Apps.ahk
 
 path_steam_library := 'D:\System\Program Data\Steam\Core\Library'
 
 AppsKey & sc073:: {
 	input := GetKeyState('Control') ? A_Clipboard : GetSelection()
 
-	if WinActive(DeprecatedApp.Steam.title) {
+	if WinActive(Apps['Steam'].title) {
 		if GetKeyState('Shift') {
 			if not query := Web.ToQuery(input)
 				return
