@@ -1,11 +1,11 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Data\Deprecated\Apps.ahk
 #Include Path.ahk
 #Include Cmd.ahk
+#Include ..\Set\Apps.ahk
 
 class Explorer {
-	static GetHwnd() => WinActive(Apps.Explorer.title)
+	static GetHwnd() => WinActive(Apps['Explorer'].title)
 
 	static GetActivePath() {
 		if (explorerHwnd := Explorer.GetHwnd()) {
@@ -14,7 +14,7 @@ class Explorer {
 					return window.Document.Folder.Self.Path
 				}
 			}
-		} else if (WinActive(Apps.Desktop.title)) {
+		} else if (WinActive(Apps['Desktop'].title)) {
 			return A_Desktop
 		}
 	}
@@ -50,5 +50,5 @@ class Explorer {
 		Cmd.Run(1, commands*)
 	}
 
-	static Restart() => Apps.Explorer.Kill()
+	static Restart() => Apps['Explorer'].Kill()
 }
