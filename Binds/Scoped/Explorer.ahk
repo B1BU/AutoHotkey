@@ -1,7 +1,8 @@
+#Requires AutoHotkey v2.0
+
 ; ! ADD PASTE AS SHORTCUT
 ; ! ADD DUPLICATE FILE
 
-#Requires AutoHotkey v2.0
 #Include ..\..\
 #Include Core\Set\Apps.ahk
 #Include Core\Lib\Explorer.ahk

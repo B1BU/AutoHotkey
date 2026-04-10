@@ -1,8 +1,9 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Lib\Text.ahk
-#Include ..\..\Core\Lib\Web.ahk
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Lib\Text.ahk
+#Include Core\Lib\Web.ahk
+#Include Core\Data\Deprecated\Apps.ahk
 
 path_steam_library := 'D:\System\Program Data\Steam\Core\Library'
 

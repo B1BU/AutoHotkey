@@ -1,9 +1,10 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\..\Core\Set\Apps.ahk
-#Include ..\..\..\Core\Lib\Utils.ahk
-#Include ..\..\..\Core\Lib\VSCode.ahk
-#Include ..\..\..\Core\Lib\Sound.ahk
+#Include ..\..\..\
+#Include Core\Set\Apps.ahk
+#Include Core\Lib\Utils.ahk
+#Include Core\Lib\VSCode.ahk
+#Include Core\Lib\Sound.ahk
 
 RAlt & F5:: {                    ; Reload Autohotkey script
 	PlaySound('beeplow')

@@ -1,6 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Set\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
 #+e:: Apps['Explorer'].Kill()                  ; Restart Explorer
 

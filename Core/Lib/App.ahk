@@ -1,7 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Lib\Extensions.ahk
-#Include ..\..\Core\Lib\Utils.ahk
+#Include ..\..\
+#Include Core\Lib\Extensions.ahk
+#Include Core\Lib\Utils.ahk
 
 class AppClass {
 	static placeholders := Map(

@@ -2,7 +2,9 @@
 
 #Include Path.ahk
 #Include Cmd.ahk
-#Include ..\Set\Apps.ahk
+
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
 class Explorer {
 	static GetHwnd() => WinActive(Apps['Explorer'].title)

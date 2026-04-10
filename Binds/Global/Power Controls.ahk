@@ -1,9 +1,10 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Lib\Patches.ahk
-#Include ..\..\Core\Lib\Utils.ahk
-#Include ..\..\Core\Lib\Icon.ahk
-#Include ..\..\Core\Lib\Power.ahk
+#Include ..\..\
+#Include Core\Lib\Patches.ahk
+#Include Core\Lib\Utils.ahk
+#Include Core\Lib\Icon.ahk
+#Include Core\Lib\Power.ahk
 
 ShutdownMenu := Menu()
 FillMenu(ShutdownMenu, [

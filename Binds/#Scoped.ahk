@@ -1,17 +1,18 @@
 #Requires AutoHotkey v2.0
 
-#Include Scoped\Explorer.ahk
-#Include Scoped\OBS.ahk
-#Include Scoped\Audacity.ahk
-#Include Scoped\Fusion 360.ahk
-#Include Scoped\VSCode.ahk
-#Include Scoped\Blockbench.ahk
-#Include Scoped\ChatGPT.ahk
-#Include Scoped\Magpie.ahk
-#Include Scoped\Fortnite.ahk
-#Include Scoped\The Outlast Trials.ahk
-#Include Scoped\Minecraft.ahk
-#Include Scoped\Peak.ahk
-#Include Scoped\Supermarket Simulator.ahk
-#Include Scoped\Half-Life 2.ahk
-#Include Scoped\House Flipper.ahk
+#Include Scoped\
+#Include Explorer.ahk
+#Include OBS.ahk
+#Include Audacity.ahk
+#Include Fusion 360.ahk
+#Include VSCode.ahk
+#Include Blockbench.ahk
+#Include ChatGPT.ahk
+#Include Magpie.ahk
+#Include Fortnite.ahk
+#Include The Outlast Trials.ahk
+#Include Minecraft.ahk
+#Include Peak.ahk
+#Include Supermarket Simulator.ahk
+#Include Half-Life 2.ahk
+#Include House Flipper.ahk
