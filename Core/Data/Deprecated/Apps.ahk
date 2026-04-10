@@ -227,12 +227,6 @@ global DeprecatedApp := {
 		}
 	),
 
-	HARDCODED: DeprecatedAppClass(
-		{
-			title: 'HARDCODED'
-		}
-	),
-
 	TaskBarX: DeprecatedAppClass(
 		{
 			target: 'D:\System\Programs\TaskbarX\TaskbarX.exe'

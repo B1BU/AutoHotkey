@@ -18,11 +18,7 @@ Media_Stop:: Apps['Spotify'].Toggle(1)   ; Open / Close Spotify
 !Media_Stop:: Apps['Spotify'].Kill()     ; Kill Spotify
 
 AppsKey & c:: {
-	if (GetKeyState('Shift') and GetKeyState('Alt')) {
-		Apps['ChromeBeta'].Run()         ; Open Chrome Beta
-	} else {
-		Apps['Chrome'].Run()             ; Open Chrome
-	}
+	Apps['Chrome'].Run()                 ; Open Chrome
 }
 
 AppsKey & o:: Apps['Obsidian'].Toggle(1) ; Open / Close Obsidian

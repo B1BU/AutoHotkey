@@ -20,10 +20,6 @@ Chrome:
   exe: chrome.exe
   title: Google Chrome ahk_class Chrome_WidgetWin_1
   target: ${ProgramFiles}\Google\Chrome\Application\chrome.exe
-ChromeBeta:
-  exe: chrome.exe
-  title: Google Chrome ahk_class Chrome_WidgetWin_1
-  target: ${ProgramFiles}\Google\Chrome Beta\Application\chrome.exe
 
 # AI Assistants
 ChatGPT:
@@ -114,8 +110,6 @@ Minecraft:
   title: Minecraft ahk_class GLFW30
 Peak:
   title: PEAK ahk_class UnityWndClass
-HARDCODED:
-  title: HARDCODED
 HouseFlipper:
   exe: HouseFlipper.exe
   title: House Flipper Game ahk_class UnityWndClass
