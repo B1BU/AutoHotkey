@@ -1,6 +1,6 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\Set\Creds.ahk
+#Include ..\..\Private\Set\Creds.ahk
 #Include ..\Set\Apps.ahk
 
 class VSCode {

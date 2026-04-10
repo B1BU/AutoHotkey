@@ -2,6 +2,8 @@
 **/TODO.md
 Scripts/Experiments/**
 Private/**
+!Private/Set
+!Private/Set/**
 !Private/Data
 Private/Data/**
 !Private/Data/Instructions.txt
