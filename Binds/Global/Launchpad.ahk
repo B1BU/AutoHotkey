@@ -59,6 +59,8 @@ AppsKey & d:: {
 
 AppsKey & w:: Apps['WhatsApp'].Toggle(1) ; Open / Close WhatsApp
 
+AppsKey & i:: Apps['Itch'].Toggle()      ; Open / Close WhatsApp
+
 AppsKey & Home:: {
 	if (GetKeyState('Alt')) {
 		Apps['Steam'].Kill()             ; Kill Steam

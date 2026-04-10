@@ -96,6 +96,9 @@ Xbox:
 Modrinth:
   exe: Modrinth DeprecatedApp.exe
   target: ${AppDataLocal}\Modrinth App\Modrinth DeprecatedApp.exe
+Itch:
+  exe: itch.exe
+  target: '"${AppDataLocal}\itch\itch-setup.exe" --prefer-launch --appname itch'
 
 # Games
 Fortnite:
