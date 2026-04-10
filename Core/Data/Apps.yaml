@@ -1,44 +1,42 @@
 # Windows
 Explorer:
-  exe: explorer.exe
+  path: explorer.exe
   title: ahk_class CabinetWClass
 Desktop:
   title: ahk_class WorkerW
 CMD:
-  exe: cmd.exe
+  path: cmd.exe
 PowerShell:
-  exe: powershell.exe
+  path: powershell.exe
 TaskMgr:
-  exe: Taskmgr.exe
+  path: Taskmgr.exe
   title: ahk_class TaskManagerWindow
 Calc:
-  exe: calc.exe
+  path: calc.exe
   title: Calc ahk_exe ApplicationFrameHost.exe
 
 # Browsing
 Chrome:
-  exe: chrome.exe
+  path: ${ProgramFiles}\Google\Chrome\Application\chrome.exe
   title: Google Chrome ahk_class Chrome_WidgetWin_1
-  target: ${ProgramFiles}\Google\Chrome\Application\chrome.exe
 
 # AI Assistants
 ChatGPT:
+  path: ${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe
+  args: --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg
   title: ChatGPT ahk_class Chrome_WidgetWin_1
-  target: '"${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe"  --profile-directory=Default --app-id=cadlkienfkclaiaibeoongdcgmdikeeg'
 Gemini:
+  path: ${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe
+  args: --profile-directory=Default --app-id=pificchcdfpinjikejhcfjobjdhcedjj
   title: Gemini ahk_class Chrome_WidgetWin_1
-  target: '"${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe" --profile-directory=Default --app-id=pificchcdfpinjikejhcfjobjdhcedjj'
 
 # Tools
 VSCode:
-  exe: Code.exe
-  target: ${AppDataLocal}\Programs\Microsoft VS Code\Code.exe
+  path: ${AppDataLocal}\Programs\Microsoft VS Code\Code.exe
 Obsidian:
-  exe: Obsidian.exe
-  target: ${ProgramFiles}\Obsidian\Obsidian.exe
+  path: ${ProgramFiles}\Obsidian\Obsidian.exe
 Notion:
-  exe: Notion.exe
-  target: ${AppDataLocal}\Programs\Notion\Notion.exe
+  path: ${AppDataLocal}\Programs\Notion\Notion.exe
 Fusion360:
   exe: fusion360.exe
 Blockbench:
@@ -54,21 +52,20 @@ OBS:
 AHK:
   exe: AutoHotkey64.exe
 AHKSpy:
-  exe: WindowSpy.ahk
-  target: ${ProgramFiles}\AutoHotkey\UX\WindowSpy.ahk
+  path: ${ProgramFiles}\AutoHotkey\UX\WindowSpy.ahk
 TaskBarX:
-  target: D:\System\Programs\TaskbarX\TaskbarX.exe
+  path: D:\System\Programs\TaskbarX\TaskbarX.exe
 Magpie:
-  exe: Magpie.exe
-  target: D:\System\Programs\Magpie-v0.11.1-x64\Magpie.exe
+  path: D:\System\Programs\Magpie-v0.11.1-x64\Magpie.exe
 
 # Comms
 Discord:
+  path: ${AppDataLocal}\Discord\Update.exe
+  args: --processStart Discord.exe
   exe: Discord.exe
-  target: '"${AppDataLocal}\Discord\Update.exe" --processStart Discord.exe'
 WhatsApp:
   title: WhatsApp
-  target: shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App
+  path: shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App
 
 # Media
 Spotify:
@@ -76,25 +73,25 @@ Spotify:
 
 # Game platforms
 Steam:
-  exe: Steam.exe
+  path: ${ProgramFilesx86}\Steam\steam.exe
   title: ahk_exe steamwebhelper.exe
-  target: ${ProgramFilesx86}\Steam\steam.exe
 SteamBP:
+  path: steam:\\open\bigpicture
   exe: steamwebhelper.exe
   title: Big Picture ahk_exe steamwebhelper.exe
-  target: steam:\\open\bigpicture
 Epic:
+  path: ${ProgramFiles}\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe
   exe: EpicGamesLauncher.exe
-  target: ${ProgramFiles}\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe
 Xbox:
+  path: shell:AppsFolder\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App
   title: Xbox
-  target: shell:AppsFolder\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App
 Modrinth:
+  path: ${AppDataLocal}\Modrinth App\Modrinth DeprecatedApp.exe
   exe: Modrinth DeprecatedApp.exe
-  target: ${AppDataLocal}\Modrinth App\Modrinth DeprecatedApp.exe
 Itch:
+  path: ${AppDataLocal}\itch\itch-setup.exe
+  args: --prefer-launch --appname itch
   exe: itch.exe
-  target: '"${AppDataLocal}\itch\itch-setup.exe" --prefer-launch --appname itch'
 
 # Games
 Fortnite:

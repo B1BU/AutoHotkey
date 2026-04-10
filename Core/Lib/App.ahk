@@ -16,24 +16,43 @@ class AppClass {
 		'AhkDir',          A_AhkDir
 	)
 
-	__New(exe, title, target) {
-		this.exe    := exe    ? ResolvePlaceholders(exe,    AppClass.placeholders) : ''
-		this.title  := title  ? ResolvePlaceholders(title,  AppClass.placeholders) : 'ahk_exe ' . this.exe
-		this.target := target ? ResolvePlaceholders(target, AppClass.placeholders) : this.exe
+	__New(path, args, exe, title) {
+		path  := ResolvePlaceholders(path, AppClass.placeholders)
+		args  := ResolvePlaceholders(args, AppClass.placeholders)
+		exe   := ResolvePlaceholders(exe, AppClass.placeholders)
+		title := ResolvePlaceholders(title, AppClass.placeholders)
+
+		if (!path and exe) {
+			path := exe
+		} else if (!exe and path) {
+			SplitPath(path, &exe)
+		}
+
+		if (!title and exe) {
+			title := 'ahk_exe ' . exe
+		}
+
+		this.path  := path
+		this.args  := args
+		this.exe   := exe
+		this.title := title
 	}
 
-	Run(args := '', admin := false, working_dir := '') {
-		run_cmd := this.target
+	Run(admin := false, args := '', working_dir := '') {
+		target := (admin ? '*runas "' : '"') . this.path . '"'
 
-		if args
-			run_cmd .= ' ' . args
+		if (this.args)
+			target .= ' ' . this.args
 
-		if admin
-			run_cmd := '*runas ' . run_cmd
+		if (args)
+			target .= ' ' . args
 
-		if working_dir
-			return Run(run_cmd, working_dir)
-		Run(run_cmd)
+		if (working_dir) {
+			Run(target, working_dir)
+			return
+		}
+
+		Run(target)
 	}
 
 	Focus() {
@@ -76,6 +95,6 @@ class AppClass {
 AppMap(app_map) {
 	result := Map()
 	for app, info in app_map
-		result[app] := AppClass(info.Get('exe', ''), info.Get('title', ''), info.Get('target', ''))
+		result[app] := AppClass(info.Get('path', ''), info.Get('args', ''), info.Get('exe', ''), info.Get('title', ''))
 	return result
 }

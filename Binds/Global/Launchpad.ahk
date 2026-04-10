@@ -6,7 +6,7 @@
 
 #esc:: Apps['TaskMgr'].Toggle()          ; Toggle Task Manager
 
-#':: Apps['CMD'].Run(,1)                 ; Open Admin Command Prompt
+#':: Apps['CMD'].Run(1)                  ; Open Admin Command Prompt
 #+':: Apps['CMD'].Run()                  ; Open Command Prompt
 
 #F1:: Apps['Calc'].Toggle(1)             ; Open / Close Calculator
