@@ -59,8 +59,6 @@ AppsKey & d:: {
 
 AppsKey & w:: Apps['WhatsApp'].Toggle(1) ; Open / Close WhatsApp
 
-AppsKey & i:: Apps['Itch'].Toggle()      ; Open / Close WhatsApp
-
 AppsKey & Home:: {
 	if (GetKeyState('Alt')) {
 		Apps['Steam'].Kill()             ; Kill Steam
@@ -86,6 +84,8 @@ AppsKey & End:: {
 }
 
 AppsKey & Del:: Apps['Xbox'].Toggle(1)   ; Open / Close Xbox App
+
+AppsKey & i:: Apps['Itch'].Toggle()      ; Open / Minimize Itch
 
 AppsKey & m:: Apps['Modrinth'].Toggle(1) ; Open / Close Modrinth
 
