@@ -4,6 +4,7 @@
 #Include Scoped\OBS.ahk
 #Include Scoped\Audacity.ahk
 #Include Scoped\Fusion 360.ahk
+#Include Scoped\VSCode.ahk
 #Include Scoped\Blockbench.ahk
 #Include Scoped\ChatGPT.ahk
 #Include Scoped\Magpie.ahk

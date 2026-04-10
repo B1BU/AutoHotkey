@@ -53,6 +53,8 @@ AHK:
   exe: AutoHotkey64.exe
 AHKSpy:
   path: ${ProgramFiles}\AutoHotkey\UX\WindowSpy.ahk
+AHKHelp:
+  title: AutoHotkey v2 Help ahk_class HH Parent
 TaskBarX:
   path: D:\System\Programs\TaskbarX\TaskbarX.exe
 Magpie:
