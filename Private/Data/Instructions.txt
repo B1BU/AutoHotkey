@@ -1,0 +1,11 @@
+Create these files if necessary
+
+[Creds.yaml]
+username: <USER NAME>
+password: <PASSWORD>
+
+[Servers.yaml]
+<SERVER NAME>:
+  address:  <SERVER ADDRESS>
+  username: <USER NAME>
+  password: <PASSWORD>

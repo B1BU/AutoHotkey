@@ -1,5 +1,7 @@
 .vscode/
-User/*
-!User/User Data.txt
-Scripts/Experiments/*
-TODO.md
+**/TODO.md
+Scripts/Experiments/**
+Private/**
+!Private/Data
+Private/Data/**
+!Private/Data/Instructions.txt
