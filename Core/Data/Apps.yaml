@@ -93,10 +93,11 @@ Epic:
 Xbox:
   title: Xbox
   target: shell:AppsFolder\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App
+Modrinth:
+  exe: Modrinth DeprecatedApp.exe
+  target: ${AppDataLocal}\Modrinth App\Modrinth DeprecatedApp.exe
 
 # Games
-SupermarketSimulator:
-  exe: Supermarket Simulator.exe
 Fortnite:
   exe: FortniteClient-Win64-Shipping.exe
 OutlastTrials:
@@ -104,12 +105,14 @@ OutlastTrials:
 HalfLife2:
   exe: hl2.exe
   title: Half-Life 2 ahk_exe hl2.exe
-Modrinth:
-  exe: Modrinth DeprecatedApp.exe
-  target: ${AppDataLocal}\Modrinth App\Modrinth DeprecatedApp.exe
+SupermarketSimulator:
+  exe: Supermarket Simulator.exe
 Minecraft:
   title: Minecraft ahk_class GLFW30
 Peak:
   title: PEAK ahk_class UnityWndClass
 HARDCODED:
   title: HARDCODED
+HouseFlipper:
+  exe: HouseFlipper.exe
+  title: House Flipper Game ahk_class UnityWndClass

@@ -13,3 +13,4 @@
 #Include Scoped\Peak.ahk
 #Include Scoped\Supermarket Simulator.ahk
 #Include Scoped\Half-Life 2.ahk
+#Include Scoped\House Flipper.ahk
