@@ -75,3 +75,8 @@ InArray(value, arr) {
 			return true
 	return false
 }
+
+WinMoveMonitor(title := "A", monitor := 1) {
+	MonitorGetWorkArea(monitor, &left, &top)
+	WinMove(left, top, , , title)
+}

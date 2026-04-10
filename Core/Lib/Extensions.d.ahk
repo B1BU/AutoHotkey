@@ -62,7 +62,7 @@ A_DarkMode: Integer
  * >>> DirUp('Foo\Bar\Script.ahk', 2)
  * 'Foo\'
  */
-DirUp(Path, Levels) String
+DirUp(Path, Levels) => String
 
 /**
  * From `Extensions.ahk`
@@ -165,3 +165,14 @@ ArrJoin(Arr [, Sep := '']) => String
  * 0
  */
 InArray(Value, Arr) => Integer
+
+/**
+ * From `Extensions.ahk`
+ *
+ * Move window to specified monitor.
+ * @param {(String)} Title
+ * Window title.
+ * @param {(Integer)} Monitor
+ * Monitor to move window to.
+ */
+WinMoveMonitor([Title := 'A', Monitor := 1])
