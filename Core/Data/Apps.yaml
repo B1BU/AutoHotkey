@@ -88,8 +88,8 @@ Xbox:
   path: shell:AppsFolder\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App
   title: Xbox
 Modrinth:
-  path: ${AppDataLocal}\Modrinth App\Modrinth DeprecatedApp.exe
-  exe: Modrinth DeprecatedApp.exe
+  path: ${AppDataLocal}\Modrinth App\Modrinth App.exe
+  exe: Modrinth App.exe
 Itch:
   path: ${AppDataLocal}\itch\itch-setup.exe
   args: --prefer-launch --appname itch
