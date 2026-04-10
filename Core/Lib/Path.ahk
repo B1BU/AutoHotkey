@@ -66,10 +66,10 @@ class Path {
 		return ArrJoin(parts, Path.sep)
 	}
 
-	static RelativeTo(_dir, _path) => ''	; Reserved
-	static Exists(_path)  => ''				; Reserved
-	static IsDir(_path)  => ''				; Reserved
-	static IsFile(_path)  => ''				; Reserved
+	static RelativeTo(_dir, _path) => '' ; Reserved
+	static Exists(_path)  => ''          ; Reserved
+	static IsDir(_path)  => ''           ; Reserved
+	static IsFile(_path)  => ''          ; Reserved
 
 	static IsAbs(_path) => _path ~= '^[a-zA-Z]:'
 

@@ -27,25 +27,25 @@ class TextProcessing {
 	}
 }
 
-CapsLock & Up::		TextProcessing.Transform(	; Upper case
+CapsLock & Up:: TextProcessing.Transform(    ; Upper case
 	StrUpper,
 	[DeprecatedApp.VSCode.title, '^+{NumpadAdd}'],
 	[DeprecatedApp.Obsidian.title, '^+{NumpadAdd}']
 )
 
-CapsLock & Down::	TextProcessing.Transform(	; lower case
+CapsLock & Down:: TextProcessing.Transform(  ; Lower case
 	StrLower,
 	[DeprecatedApp.VSCode.title, '^+{NumpadSub}'],
 	[DeprecatedApp.Obsidian.title, '^+{NumpadSub}']
 )
 
-CapsLock & Left::	TextProcessing.Transform(	; Sentence case
+CapsLock & Left:: TextProcessing.Transform(  ; Sentence case
 	StrSentence,
 	DeprecatedApp.VSCode.title,
 	DeprecatedApp.Obsidian.title
 )
 
-CapsLock & Right::	TextProcessing.Transform(	; Title case
+CapsLock & Right:: TextProcessing.Transform( ; Title case
 	StrTitle,
 	[DeprecatedApp.VSCode.title, '^+{NumpadDiv}'],
 	[DeprecatedApp.Obsidian.title, '^+{NumpadDiv}']

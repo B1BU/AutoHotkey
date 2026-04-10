@@ -79,4 +79,4 @@ class Explorer {
 }
 
 #HotIf (WinActive(explorer_title) or WinActive(desktop_title))
-	^!v:: Explorer.PasteSymlink()	; Paste as symlink
+	^!v:: Explorer.PasteSymlink() ; Paste as symlink

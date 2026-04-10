@@ -1,3 +1,3 @@
 #Requires AutoHotkey v2.0
 
-#PrintScreen::	Run('ms-screenclip:')	; Snipping Tool
+#PrintScreen:: Run('ms-screenclip:') ; Snipping Tool
