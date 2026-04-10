@@ -5,3 +5,7 @@ Private/**
 !Private/Data
 Private/Data/**
 !Private/Data/Instructions.txt
+!Private/Core
+Private/Core/**
+!Private/Core/Set
+!Private/Core/Set/**
