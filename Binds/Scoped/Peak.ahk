@@ -1,7 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
-#HotIf WinActive(DeprecatedApp.Peak.title)
+#HotIf WinActive(Apps['Peak'].title)
 	Tab:: b
 #HotIf

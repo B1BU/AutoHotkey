@@ -1,8 +1,9 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
-#HotIf WinActive(DeprecatedApp.HalfLife2.title)
+#HotIf WinActive(Apps['HalfLife2'].title)
 	'::F1
 	"::"
 	!'::!'

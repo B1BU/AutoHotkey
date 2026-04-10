@@ -1,7 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
-#HotIf (WinActive(DeprecatedApp.Magpie.title))
-	F5:: DeprecatedApp.Magpie.Restart()
+#HotIf (WinActive(Apps['Magpie'].title))
+	F5:: Apps['Magpie'].Restart()
 #HotIf

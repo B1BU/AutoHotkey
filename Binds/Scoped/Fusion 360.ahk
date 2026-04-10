@@ -1,7 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
-#HotIf (WinActive(DeprecatedApp.Fusion360.title))
-	#Include ..\Common\Alt Redo.ahk
+#HotIf (WinActive(Apps['Fusion360'].title))
+	#Include Binds\Common\Alt Redo.ahk
 #HotIf

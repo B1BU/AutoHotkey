@@ -1,8 +1,9 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
-#HotIf (WinActive(DeprecatedApp.ChatGPT.title))
+#HotIf (WinActive(Apps['ChatGPT'].title))
 	^n:: ^+o
-	^+n:: DeprecatedApp.ChatGPT.Open()
+	^+n:: Apps['ChatGPT'].Run()
 #HotIf

@@ -1,7 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Lib\Text.ahk
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
+#Include Core\Lib\Text.ahk
 
 class Minecraft {
 	static Send(text) {
@@ -12,7 +13,7 @@ class Minecraft {
 	}
 }
 
-#HotIf (GetKeyState('ScrollLock', 'T') and WinActive(DeprecatedApp.Minecraft.title))
-	F5:: Minecraft.Send('/reload')	; Reload datapack
-	+k:: Minecraft.Send('/kill')	; Commit suicide
+#HotIf (GetKeyState('ScrollLock', 'T') and WinActive(Apps['Minecraft'].title))
+	F5:: Minecraft.Send('/reload') ; Reload datapack
+	+k:: Minecraft.Send('/kill')   ; Commit suicide
 #HotIf

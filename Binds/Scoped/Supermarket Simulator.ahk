@@ -1,8 +1,9 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\Core\Data\Deprecated\Apps.ahk
+#Include ..\..\
+#Include Core\Set\Apps.ahk
 
-#HotIf (WinActive(DeprecatedApp.SupermarketSimulator.title))
+#HotIf (WinActive(Apps['SupermarketSimulator'].title))
 	~q:: r
 	':: m
 #HotIf
