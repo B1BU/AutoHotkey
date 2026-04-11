@@ -39,7 +39,7 @@ Icon(path, size := 16) {
 	SplitPath(path, &icon, &dir, &ext)
 
 	if (!icon)
-		Throw('Icon ' icon ' not found.')
+		return
 
 	if (!ext)
 		ext := 'png'
