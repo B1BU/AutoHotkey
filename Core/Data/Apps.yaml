@@ -77,10 +77,10 @@ Spotify:
 Steam:
   path: ${ProgramFilesx86}\Steam\steam.exe
   title: Steam ahk_class SDL_app
-SteamBP:
-  path: steam:\\open\bigpicture
-  exe: steamwebhelper.exe
-  title: Big Picture ahk_exe steamwebhelper.exe
+SteamBigPicture:
+  path: ${ProgramFilesx86}\Steam\steam.exe
+  args: -start steam://open/bigpicture
+  title: Big Picture ahk_class SDL_app
 Epic:
   path: ${ProgramFiles}\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe
   exe: EpicGamesLauncher.exe

@@ -61,7 +61,7 @@ AppsKey & Home:: {
 	if (GetKeyState('Alt')) {
 		Apps['Steam'].Kill()                   ; Kill Steam
 	} else if (GetKeyState('Shift')) {
-		Apps['SteamBP'].Toggle(1)              ; Open / Close Steam Big Picture
+		Apps['SteamBigPicture'].Toggle(1)      ; Open / Close Steam Big Picture
 	} else {
 		Apps['Steam'].Toggle(1)                ; Open / Close Steam
 	}
