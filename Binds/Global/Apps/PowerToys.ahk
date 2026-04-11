@@ -3,7 +3,7 @@
 #Include ..\..\..\
 #Include Core\Lib\Icon.ahk
 #Include Core\Lib\Utils.ahk
-#Include Private\Set\Layouts.ahk
+#Include Core\Set\Layouts.ahk
 
 PowerToysLayoutMenuHandler(ItemName, ItemPos, MyMenu, key) {
 	Send('{LWin Down}{Control Down}{LAlt Down}{' key '}{LWin Up}{Control Up}{LAlt Up}')
