@@ -10,22 +10,22 @@ ShutdownMenu := Menu()
 FillMenu(ShutdownMenu, [
 	{
 		name: 'Shutdown',
-		icon: Icon('Power'),
+		icon: Icon('Windows\Power'),
 		callback: (*) => Power.Shutdown()
 	},
 	{
 		name: 'Suspend',
-		icon: Icon('Moon'),
+		icon: Icon('Windows\Moon'),
 		callback: (*) => Power.Suspend()
 	},
 	{
 		name: 'Restart',
-		icon: Icon('RotateCCW'),
+		icon: Icon('Windows\RotateCCW'),
 		callback: (*) => Power.Restart()
 	},
 	{
 		name: 'BIOS',
-		icon: Icon('CPU'),
+		icon: Icon('Windows\CPU'),
 		callback: (*) => Power.RestartToBIOS()
 	},
 ])

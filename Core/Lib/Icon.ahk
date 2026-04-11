@@ -33,31 +33,36 @@ PNGIcon(icon_path, icon_size := 0) {
 	)
 }
 
-Icon(icon, size := 16) {
-	icons_dir := A_AhkDir . '\Core\Assets\Icons\'
-	dark_icons_dir := icons_dir . 'Dark\'
+Icon(path, size := 16) {
+	ahk_icons_dir := A_AhkDir '\Core\Assets\Icons'
 
-	SplitPath(icon, , , &ext)
-	if not ext {
+	SplitPath(path, &icon, &dir, &ext)
+
+	if (!icon)
+		Throw('Icon ' icon ' not found.')
+
+	if (!ext)
 		ext := 'png'
-		icon := icon . '.' . ext
-	}
+
+	icon_dir := dir ? ahk_icons_dir '\' dir : ahk_icons_dir
 
 	if ext == 'png' {
 		if A_DarkMode {
-			icon_path := dark_icons_dir . icon
+			icon_path := icon_dir '\' icon '.Dark.png'
 			if FileExist(icon_path)
 				return PNGIcon(icon_path, size)
 		}
 
-		icon_path := icons_dir . icon
+		icon_path := icon_dir '\' icon '.png'
 		if FileExist(icon_path)
 			return PNGIcon(icon_path, size)
+
 		return
 	}
 
-	icon_path := icons_dir . icon
-	if FileExist(icon_path)
+	icon_path := icon_dir '\' icon '.png'
+	if !FileExist(icon_path)
 		return icon_path
+
 	return
 }
