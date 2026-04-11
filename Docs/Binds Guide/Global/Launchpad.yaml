@@ -2,11 +2,11 @@ Explorer:
   Win + Shift + E        : Restart Explorer
 Task Manager:
   Win + Esc              : Open Task Manager
+PowerShell:
+  Win + '                : Open PowerShell (Admin)
+  Win + Shift + '        : Open PowerShell
 Calculator:
   Win + F1               : Open / Close Calculator
-CMD:
-  Win + '                : Open CMD (Admin)
-  Win + Shift + '        : Open CMD
 
 Chrome:
   App + C                : Open Chrome
