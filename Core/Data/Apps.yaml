@@ -76,7 +76,7 @@ Spotify:
 # Game platforms
 Steam:
   path: ${ProgramFilesx86}\Steam\steam.exe
-  title: ahk_exe steamwebhelper.exe
+  title: Steam ahk_class SDL_app
 SteamBP:
   path: steam:\\open\bigpicture
   exe: steamwebhelper.exe
