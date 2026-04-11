@@ -60,16 +60,10 @@ AppsKey & w:: Apps['WhatsApp'].Toggle(1)       ; Open / Close WhatsApp
 AppsKey & Home:: {
 	if (GetKeyState('Alt')) {
 		Apps['Steam'].Kill()                   ; Kill Steam
-	} else if (GetKeyState('Control')) {
-		Apps['Steam'].Close()                  ; Close Steam
 	} else if (GetKeyState('Shift')) {
 		Apps['SteamBP'].Toggle(1)              ; Open / Close Steam Big Picture
 	} else {
-		if (WinActive(Apps['Steam'].title)) {
-			Apps['SteamBP'].Toggle(1)          ; Open / Close Steam Big Picture
-		} else {
-			Apps['Steam'].Run()                ; Open Steam
-		}
+		Apps['Steam'].Toggle(1)                ; Open / Close Steam
 	}
 }
 
