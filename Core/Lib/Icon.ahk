@@ -37,7 +37,7 @@ Icon(icon, size := 16) {
 	icons_dir := A_AhkDir . '\Core\Assets\Icons\'
 	dark_icons_dir := icons_dir . 'Dark\'
 
-	SplitPath(icon,,, &ext)
+	SplitPath(icon, , , &ext)
 	if not ext {
 		ext := 'png'
 		icon := icon . '.' . ext
