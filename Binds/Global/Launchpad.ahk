@@ -11,7 +11,7 @@ PowerShellArgs := '-NoExit -WindowStyle Maximized -Command "Clear-Host"'
 #':: Apps['PowerShell'].Run(1, PowerShellArgs) ; Open PowerShell as Admin
 #+':: Apps['PowerShell'].Run(, PowerShellArgs) ; Open PowerShell
 
-#F1:: Apps['Calc'].Toggle(1)                   ; Open / Close Calculator
+AppsKey & =:: Apps['Calc'].Toggle(1)           ; Open / Close Calculator
 
 AppsKey & x:: Apps['TaskBarX'].Kill()          ; Restart TaskBarX
 
