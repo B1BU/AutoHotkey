@@ -17,7 +17,7 @@ FillMenu(menu, items) {
 	for item in items {
 		menu.Add(item.name, item.callback)
 
-		if HasProp(item, 'icon')
+		if (HasProp(item, 'icon') and item.icon)
 			menu.SetIcon(item.name, item.icon)
 	}
 }
