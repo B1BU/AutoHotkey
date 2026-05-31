@@ -3,6 +3,6 @@
 #Include ..\..\
 #Include Core\Set\Apps.ahk
 
-#HotIf (WinActive(Apps['Fusion360'].title))
+#HotIf (WinActive(Apps['Fusion 360'].title))
 	#Include Binds\Common\Alt Redo.ahk
 #HotIf

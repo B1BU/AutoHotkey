@@ -22,4 +22,4 @@ RAlt & e:: Run(A_AhkDir)         ; Open AutoHotkey folder
 
 RAlt & v:: VSCode.Open(A_AhkDir) ; Edit AutoHotkey folder
 
-RAlt & s:: Apps['AHKSpy'].Run()  ; Open AutoHotkey Window Spy
+RAlt & s:: Apps['AHK Spy'].Run()  ; Open AutoHotkey Window Spy

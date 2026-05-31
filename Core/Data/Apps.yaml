@@ -8,10 +8,13 @@ CMD:
   path: cmd.exe
 PowerShell:
   path: powershell.exe
+PowerShell*:
+  path: powershell.exe
+  args: -NoExit -WindowStyle Maximized -Command "Clear-Host"
 TaskMgr:
   path: Taskmgr.exe
   title: ahk_class TaskManagerWindow
-Calc:
+Calculator:
   path: calc.exe
   title: Calc ahk_exe ApplicationFrameHost.exe
 
@@ -37,8 +40,8 @@ Obsidian:
   path: ${ProgramFiles}\Obsidian\Obsidian.exe
 Notion:
   path: ${AppDataLocal}\Programs\Notion\Notion.exe
-Fusion360:
-  exe: fusion360.exe
+Fusion 360:
+  exe: Fusion360.exe
 Blockbench:
   exe: Blockbench.exe
 Audacity:
@@ -51,9 +54,9 @@ OBS:
 # Programs
 AHK:
   exe: AutoHotkey64.exe
-AHKSpy:
+AHK Spy:
   path: ${ProgramFiles}\AutoHotkey\UX\WindowSpy.ahk
-AHKHelp:
+AHK Help:
   title: AutoHotkey v2 Help ahk_class HH Parent
 TaskBarX:
   path: D:\System\Programs\TaskbarX\TaskbarX.exe
@@ -77,7 +80,7 @@ Spotify:
 Steam:
   path: ${ProgramFilesx86}\Steam\steam.exe
   title: Steam ahk_class SDL_app
-SteamBigPicture:
+Steam Big Picture:
   path: ${ProgramFilesx86}\Steam\steam.exe
   args: -start steam://open/bigpicture
   title: Big Picture ahk_class SDL_app
@@ -98,17 +101,17 @@ Itch:
 # Games
 Fortnite:
   exe: FortniteClient-Win64-Shipping.exe
-OutlastTrials:
+The Outlast Trials:
   exe: TOTClient-Win64-Shipping.exe
-HalfLife2:
+Half-Life 2:
   exe: hl2.exe
   title: Half-Life 2 ahk_exe hl2.exe
-SupermarketSimulator:
+Supermarket Simulator:
   exe: Supermarket Simulator.exe
 Minecraft:
   title: Minecraft ahk_class GLFW30
 Peak:
   title: PEAK ahk_class UnityWndClass
-HouseFlipper:
+House Flipper:
   exe: HouseFlipper.exe
   title: House Flipper Game ahk_class UnityWndClass

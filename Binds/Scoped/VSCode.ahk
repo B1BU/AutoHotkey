@@ -6,9 +6,9 @@
 
 #HotIf (WinActive(Apps['VSCode'].title))
 	~^F1:: { ; Fix AHK help window
-		if (WinWait(Apps['AHKHelp'].title, , 2)) {
-			WinMoveMonitor(Apps['AHKHelp'].title, 1)
-			WinMaximize(Apps['AHKHelp'].title)
+		if (WinWait(Apps['AHK Help'].title, , 2)) {
+			WinMoveMonitor(Apps['AHK Help'].title, 1)
+			WinMaximize(Apps['AHK Help'].title)
 		}
 	}
 #HotIf

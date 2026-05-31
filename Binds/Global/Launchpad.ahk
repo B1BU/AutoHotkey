@@ -3,82 +3,81 @@
 #Include ..\..\
 #Include Core\Set\Apps.ahk
 
-#+e:: Apps['Explorer'].Kill()                  ; Restart Explorer
+#+e:: Apps['Explorer'].Kill()               ; Restart Explorer
 
-#esc:: Apps['TaskMgr'].Toggle()                ; Toggle Task Manager
+#esc:: Apps['TaskMgr'].Toggle()             ; Toggle Task Manager
 
-PowerShellArgs := '-NoExit -WindowStyle Maximized -Command "Clear-Host"'
-#':: Apps['PowerShell'].Run(1, PowerShellArgs) ; Open PowerShell as Admin
-#+':: Apps['PowerShell'].Run(, PowerShellArgs) ; Open PowerShell
+#':: Apps['PowerShell*'].Run(1)             ; Start PowerShell as Admin
+#+':: Apps['PowerShell*'].Run()             ; Start PowerShell
 
-AppsKey & =:: Apps['Calc'].Toggle(1)           ; Open / Close Calculator
+AppsKey & =:: Apps['Calculator'].Toggle(1)  ; Start / Close Calculator
 
-AppsKey & x:: Apps['TaskBarX'].Kill()          ; Restart TaskBarX
+AppsKey & x:: Apps['TaskBarX'].Kill()       ; Restart TaskBarX
 
-Media_Stop:: Apps['Spotify'].Toggle(1)         ; Open / Close Spotify
-^Media_Stop:: Apps['Spotify'].Minimize()       ; Minimize Spotify
-!Media_Stop:: Apps['Spotify'].Kill()           ; Kill Spotify
+Media_Stop:: Apps['Spotify'].Toggle(1)      ; Start / Close Spotify
+^Media_Stop:: Apps['Spotify'].Minimize()    ; Minimize Spotify
+!Media_Stop:: Apps['Spotify'].Kill()        ; Kill Spotify
 
 AppsKey & c:: {
-	Apps['Chrome'].Run()                       ; Open Chrome
+	Apps['Chrome'].Run()                    ; Start Chrome
 }
 
-AppsKey & o:: Apps['Obsidian'].Toggle(1)       ; Open / Close Obsidian
+AppsKey & o:: Apps['Obsidian'].Toggle(1)    ; Start / Close Obsidian
 
 AppsKey & n:: {
 	if (GetKeyState('Alt')) {
-		Apps['Notion'].Kill()                  ; Kill Notion
+		Apps['Notion'].Kill()               ; Kill Notion
 	} else {
-		Apps['Notion'].Toggle(1)               ; Open / Close Notion
+		Apps['Notion'].Toggle(1)            ; Start / Close Notion
 	}
 }
 
 AppsKey & g:: {
 	if (GetKeyState('Control')) {
-		Apps['ChatGPT'].Close()                ; Close ChatGPT
+		Apps['ChatGPT'].Close()             ; Close ChatGPT
 	} else if (GetKeyState('Shift')) {
-		Apps['ChatGPT'].Run()                  ; Open ChatGPT
+		Apps['ChatGPT'].Run()               ; Start ChatGPT
 	} else {
-		Apps['ChatGPT'].Toggle()               ; Open / Minimize ChatGPT
+		Apps['ChatGPT'].Toggle()            ; Start / Minimize ChatGPT
 	}
 }
 
-AppsKey & v:: Apps['VSCode'].Run()             ; Open VSCode
+AppsKey & v:: Apps['VSCode'].Run()          ; Start VSCode
 
 AppsKey & d:: {
 	if (GetKeyState('Alt')) {
-		Apps['Discord'].Kill()                 ; Kill Discord
+		Apps['Discord'].Kill()              ; Kill Discord
 	} else if (GetKeyState('Control')) {
-		Apps['Discord'].Close()                ; Close Discord
+		Apps['Discord'].Close()             ; Close Discord
 	} else {
-		Apps['Discord'].Toggle()               ; Open / Minimize Discord
+		Apps['Discord'].Toggle()            ; Start / Minimize Discord
 	}
 }
 
-AppsKey & w:: Apps['WhatsApp'].Toggle(1)       ; Open / Close WhatsApp
+AppsKey & w:: Apps['WhatsApp'].Toggle(1)    ; Start / Close WhatsApp
 
 AppsKey & Home:: {
 	if (GetKeyState('Alt')) {
-		Apps['Steam'].Kill()                   ; Kill Steam
+		Apps['Steam'].Kill()                ; Kill Steam
 	} else if (GetKeyState('Shift')) {
-		Apps['SteamBigPicture'].Toggle(1)      ; Open / Close Steam Big Picture
+		Apps['Steam Big Picture'].Toggle(1) ; Start / Close Steam Big Picture
 	} else {
-		Apps['Steam'].Toggle(1)                ; Open / Close Steam
+		Apps['Steam'].Toggle(1)             ; Start / Close Steam
 	}
 }
 
 AppsKey & End:: {
 	if (GetKeyState('Alt')) {
-		Apps['Epic'].Kill()                    ; Kill Epic Games
+		Apps['Epic'].Kill()                 ; Kill Epic Games
 	} else {
-		Apps['Epic'].Toggle(1)                 ; Open / Close Epic Games
+		Apps['Epic'].Toggle(1)              ; Start / Close Epic Games
 	}
 }
 
-AppsKey & Del:: Apps['Xbox'].Toggle(1)         ; Open / Close Xbox App
+AppsKey & Del:: Apps['Xbox'].Toggle(1)      ; Start / Close Xbox App
 
-AppsKey & i:: Apps['Itch'].Toggle()            ; Open / Minimize Itch
+AppsKey & i:: Apps['Itch'].Toggle()         ; Start / Minimize Itch
 
-AppsKey & m:: Apps['Modrinth'].Toggle(1)       ; Open / Close Modrinth
+AppsKey & m:: Apps['Modrinth'].Toggle(1)    ; Start / Close Modrinth
 
-AppsKey & k:: Apps['Krita'].Toggle()           ; Open / Close Krita
+AppsKey & k:: Apps['Krita'].Toggle()        ; Start / Close Krita

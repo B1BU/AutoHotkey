@@ -3,7 +3,7 @@
 #Include ..\..\
 #Include Core\Set\Apps.ahk
 
-#HotIf (WinActive(Apps['HouseFlipper'].title))
+#HotIf (WinActive(Apps['House Flipper'].title))
 	!LButton:: Send('{Enter}')
 	!RButton:: Send('{Esc}')
 #HotIf

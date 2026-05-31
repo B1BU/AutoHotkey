@@ -3,7 +3,7 @@
 #Include ..\..\
 #Include Core\Set\Apps.ahk
 
-#HotIf (WinActive(Apps['SupermarketSimulator'].title))
+#HotIf (WinActive(Apps['Supermarket Simulator'].title))
 	~q:: r
 	':: m
 #HotIf

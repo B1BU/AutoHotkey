@@ -3,7 +3,7 @@
 #Include ..\..\
 #Include Core\Set\Apps.ahk
 
-#HotIf WinActive(Apps['HalfLife2'].title)
+#HotIf WinActive(Apps['Half-Life 2'].title)
 	'::F1
 	"::"
 	!'::!'
