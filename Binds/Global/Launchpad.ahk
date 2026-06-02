@@ -7,8 +7,8 @@
 
 #esc:: Apps['TaskMgr'].Toggle()             ; Toggle Task Manager
 
-#':: Apps['PowerShell*'].Run(1)             ; Start PowerShell as Admin
-#+':: Apps['PowerShell*'].Run()             ; Start PowerShell
+#':: Apps['Terminal PowerShell'].Run(1)     ; Start Terminal as Admin
+#+':: Apps['Terminal PowerShell'].Run()     ; Start Terminal
 
 AppsKey & =:: Apps['Calculator'].Toggle(1)  ; Start / Close Calculator
 

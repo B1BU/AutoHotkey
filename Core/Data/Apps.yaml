@@ -4,13 +4,19 @@ Explorer:
   title: ahk_class CabinetWClass
 Desktop:
   title: ahk_class WorkerW
+Terminal:
+  path: wt
+  args: -M
+Terminal PowerShell:
+  path: wt
+  args: -M -p "Windows PowerShell" powershell -NoExit -Command "Clear-Host"
 CMD:
   path: cmd.exe
 PowerShell:
   path: powershell.exe
 PowerShell*:
   path: powershell.exe
-  args: -NoExit -WindowStyle Maximized -Command "Clear-Host"
+  args: -WindowStyle Maximized -NoExit -Command "Clear-Host"
 TaskMgr:
   path: Taskmgr.exe
   title: ahk_class TaskManagerWindow
