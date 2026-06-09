@@ -76,7 +76,13 @@ AppsKey & End:: {
 
 AppsKey & Del:: Apps['Xbox'].Toggle(1)      ; Start / Close Xbox App
 
-AppsKey & i:: Apps['Itch'].Toggle()         ; Start / Minimize Itch
+AppsKey & i:: {                             ; Start / Minimize Itch
+	if GetKeyState('Alt') {
+		Apps['Itch'].Kill()
+	} else {
+		Apps['Itch'].Toggle()
+	}
+}
 
 AppsKey & m:: Apps['Modrinth'].Toggle(1)    ; Start / Close Modrinth
 
