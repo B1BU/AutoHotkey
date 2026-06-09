@@ -104,7 +104,9 @@ class AppClass {
 		if (!data_path := this.data)
 			return
 
-		profile_path := data_path '.' profile
+		profile_denominator := '.profile.'
+
+		profile_path := data_path profile_denominator profile
 
 		if (data_path_attrs := DirExist(data_path)) {
 			if (!InStr(data_path_attrs, 'D'))
@@ -117,7 +119,7 @@ class AppClass {
 			} else {
 				if (profile == 'default')
 					return
-				DirMove(data_path, data_path '.default')
+				DirMove(data_path, data_path profile_denominator 'default')
 			}
 		}
 
