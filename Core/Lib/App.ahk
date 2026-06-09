@@ -49,13 +49,11 @@ class AppClass {
 			target .= ' ' . args
 
 		if (working_dir) {
-			try
-				Run(target, working_dir)
+			try Run(target, working_dir)
 			return
 		}
 
-		try
-			Run(target)
+		try Run(target)
 	}
 
 	Focus() {
