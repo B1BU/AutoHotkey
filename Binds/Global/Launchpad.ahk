@@ -54,7 +54,13 @@ AppsKey & d:: {
 	}
 }
 
-AppsKey & w:: Apps['WhatsApp'].Toggle(1)    ; Start / Close WhatsApp
+AppsKey & w:: {
+	if (GetKeyState('Alt')) {
+		Apps['WhatsApp'].Kill()             ; Kill WhatsApp
+	} else {
+		Apps['WhatsApp'].Toggle(1)          ; Start / Close WhatsApp
+	}
+}
 
 AppsKey & Home:: {
 	if (GetKeyState('Alt')) {
