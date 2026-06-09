@@ -3,6 +3,7 @@
 #Include ..\..\
 #Include Core\Lib\Extensions.ahk
 #Include Core\Lib\Utils.ahk
+#Include Core\Lib\FileMGMT.ahk
 
 class AppClass {
 	static placeholders := Map(
@@ -17,11 +18,12 @@ class AppClass {
 		'AhkDir',          A_AhkDir
 	)
 
-	__New(path, args, exe, title) {
+	__New(path, args, exe, title, data) {
 		path  := ResolvePlaceholders(path, AppClass.placeholders)
 		args  := ResolvePlaceholders(args, AppClass.placeholders)
 		exe   := ResolvePlaceholders(exe, AppClass.placeholders)
 		title := ResolvePlaceholders(title, AppClass.placeholders)
+		data := ResolvePlaceholders(data, AppClass.placeholders)
 
 		if (!path and exe) {
 			path := exe
@@ -33,13 +35,19 @@ class AppClass {
 			title := 'ahk_exe ' . exe
 		}
 
-		this.path  := path
-		this.args  := args
-		this.exe   := exe
-		this.title := title
+		SplitPath(data,,,, &data_name)
+
+		this.path      := path
+		this.args      := args
+		this.exe       := exe
+		this.title     := title
+		this.data      := data
+		this.data_name := data_name
 	}
 
-	Run(admin := false, args := '', working_dir := '') {
+	Run(admin := false, args := '', working_dir := '', profile := 'default') {
+		this.SetProfile(profile)
+
 		target := (admin ? '*runas "' : '"') . this.path . '"'
 
 		if (this.args)
@@ -91,11 +99,45 @@ class AppClass {
 			this.Run()
 		}
 	}
+
+	SetProfile(profile := 'default') {
+		if (!data_path := this.data)
+			return
+
+		profile_path := data_path '.' profile
+
+		if (data_path_attrs := DirExist(data_path)) {
+			if (!InStr(data_path_attrs, 'D'))
+				return
+
+			if (InStr(data_path_attrs, 'L')) {
+				symlink_target := GetSymlinkTarget(data_path)
+				if (symlink_target == profile_path)
+					return
+			} else {
+				if (profile == 'default')
+					return
+				DirMove(data_path, data_path '.default')
+			}
+		}
+
+		if (!DirExist(profile_path)) {
+			DirCreate(profile_path)
+		}
+
+		this.Kill()
+		while true {
+			try {
+				SymLink(data_path, profile_path, true)
+				break
+			}
+		}
+	}
 }
 
 AppMap(app_map) {
 	result := Map()
 	for app, info in app_map
-		result[app] := AppClass(info.Get('path', ''), info.Get('args', ''), info.Get('exe', ''), info.Get('title', ''))
+		result[app] := AppClass(info.Get('path', ''), info.Get('args', ''), info.Get('exe', ''), info.Get('title', ''), info.Get('data', ''))
 	return result
 }

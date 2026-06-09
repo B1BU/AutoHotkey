@@ -103,6 +103,7 @@ Itch:
   path: ${AppDataLocal}\itch\itch-setup.exe
   args: --prefer-launch --appname itch
   exe: itch.exe
+  data: ${AppData}\itch
 
 # Games
 Fortnite:
