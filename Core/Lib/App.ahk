@@ -81,13 +81,13 @@ class AppClass {
 		try ProcessClose(this.exe)
 	}
 
-	Restart() {
+	Restart(admin := false, args := '', working_dir := '', profile := 'default') {
 		this.Kill()
 		WinWaitClose(this.title)
-		this.Run()
+		this.Run(admin, args, working_dir, profile)
 	}
 
-	Toggle(close := false) {
+	Toggle(close := false, admin := false, args := '', working_dir := '', profile := 'default') {
 		if WinActive(this.title) {
 			if close
 				this.Close()
@@ -96,7 +96,7 @@ class AppClass {
 		} else if WinExist(this.title) {
 			this.Focus()
 		} else {
-			this.Run()
+			this.Run(admin, args, working_dir, profile)
 		}
 	}
 
