@@ -1,6 +1,4 @@
-﻿; NOT MINE
-
-; Controller Test Script
+﻿; Controller Test Script
 ; https://www.autohotkey.com
 ; This script helps determine the button numbers and other attributes
 ; of your controller (gamepad, joystick, etc.). It might also reveal

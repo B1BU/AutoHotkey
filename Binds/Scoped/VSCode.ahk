@@ -1,8 +1,8 @@
 #Requires AutoHotkey v2.0
 
 #Include ..\..\
-#Include Core\Lib\Extensions.ahk
-#Include Core\Set\Apps.ahk
+#Include Lib\Extensions.ahk
+#Include Load\Apps.ahk
 
 #HotIf (WinActive(Apps['VSCode'].title))
 	~^F1:: { ; Fix AHK help window

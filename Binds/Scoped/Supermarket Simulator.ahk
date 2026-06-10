@@ -1,7 +1,7 @@
 #Requires AutoHotkey v2.0
 
 #Include ..\..\
-#Include Core\Set\Apps.ahk
+#Include Load\Apps.ahk
 
 #HotIf (WinActive(Apps['Supermarket Simulator'].title))
 	~q:: r

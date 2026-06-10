@@ -5,8 +5,8 @@
 ; ! Add color conversions
 
 #Include ..\..\..\
-#Include Core\Lib\Extensions.ahk
-#Include Core\Lib\Utils.ahk
+#Include Lib\Extensions.ahk
+#Include Lib\Utils.ahk
 
 class _ColorPicker {
 	static title := 'ahk_exe PowerToys.ColorPickerUI.exe'

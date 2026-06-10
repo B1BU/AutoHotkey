@@ -4,8 +4,8 @@
 ; ! ADD DUPLICATE FILE
 
 #Include ..\..\
-#Include Core\Set\Apps.ahk
-#Include Core\Lib\Explorer.ahk
+#Include Load\Apps.ahk
+#Include Lib\Explorer.ahk
 
 #HotIf WinActive(Apps['Explorer'].title) ; Explorer
 	Home::  !Up   ; Go up

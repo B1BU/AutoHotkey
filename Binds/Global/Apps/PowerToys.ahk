@@ -1,9 +1,9 @@
 #Requires AutoHotkey v2.0
 
 #Include ..\..\..\
-#Include Core\Lib\Icon.ahk
-#Include Core\Lib\Utils.ahk
-#Include Core\Set\Layouts.ahk
+#Include Lib\Icon.ahk
+#Include Lib\Utils.ahk
+#Include Load\Layouts.ahk
 
 PowerToysLayoutMenuHandler(ItemName, ItemPos, MyMenu, key) {
 	Send('{LWin Down}{Control Down}{LAlt Down}{' key '}{LWin Up}{Control Up}{LAlt Up}')

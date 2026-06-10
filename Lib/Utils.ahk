@@ -2,7 +2,7 @@
 
 #Include Extensions.ahk
 
-global A_AhkDir := DirUp(A_LineFile, 1 + 2)
+global A_AhkDir := DirUp(A_LineFile, 1 + 1)
 
 Spam(time, func, args*) {
 	loop {

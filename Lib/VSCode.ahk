@@ -1,8 +1,8 @@
 #Requires AutoHotkey v2.0
 
-#Include ..\..\
-#Include Private\Set\Creds.ahk
-#Include Core\Set\Apps.ahk
+#Include ..\
+#Include Load\Private\Creds.ahk
+#Include Load\Apps.ahk
 
 class VSCode {
 	static Open(path := '') {

@@ -1,9 +1,9 @@
 #Requires AutoHotkey v2.0
 
 #Include ..\..\
-#Include Core\Lib\Text.ahk
-#Include Core\Lib\Web.ahk
-#Include Core\Set\Apps.ahk
+#Include Lib\Text.ahk
+#Include Lib\Web.ahk
+#Include Load\Apps.ahk
 
 path_steam_library := 'D:\System\Program Data\Steam\Core\Library'
 

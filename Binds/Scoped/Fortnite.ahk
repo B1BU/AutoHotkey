@@ -3,7 +3,7 @@
 A_MenuMaskKey := 'vkE8'
 
 #Include ..\..\
-#Include Core\Set\Apps.ahk
+#Include Load\Apps.ahk
 
 FN_INV_SPEC := {
 	hotbar: {

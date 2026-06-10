@@ -1,9 +1,9 @@
 #Requires AutoHotkey v2.0
 
 #Include ..\..\
-#Include Core\Lib\Extensions.ahk
-#Include Core\Lib\Text.ahk
-#Include Core\Set\Apps.ahk
+#Include Lib\Extensions.ahk
+#Include Lib\Text.ahk
+#Include Load\Apps.ahk
 
 class TextProcessing {
 	static Transform(transformation, exceptions*) {
