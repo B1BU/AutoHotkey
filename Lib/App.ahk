@@ -45,7 +45,12 @@ class AppClass {
 		this.data_name := data_name
 	}
 
-	Run(admin := false, args := '', working_dir := '', profile := 'default') {
+	Run(
+		admin := false,
+		args := '',
+		working_dir := '',
+		profile := 'default'
+	) {
 		this.SetProfile(profile)
 
 		target := (admin ? '*runas "' : '"') . this.path . '"'
@@ -81,13 +86,24 @@ class AppClass {
 		try ProcessClose(this.exe)
 	}
 
-	Restart(admin := false, args := '', working_dir := '', profile := 'default') {
+	Restart(
+		admin := false,
+		args := '',
+		working_dir := '',
+		profile := 'default'
+	) {
 		this.Kill()
 		WinWaitClose(this.title)
 		this.Run(admin, args, working_dir, profile)
 	}
 
-	Toggle(close := false, admin := false, args := '', working_dir := '', profile := 'default') {
+	Toggle(
+		close := false,
+		admin := false,
+		args := '',
+		working_dir := '',
+		profile := 'default'
+	) {
 		if WinActive(this.title) {
 			if close
 				this.Close()
@@ -142,7 +158,15 @@ class AppClass {
  */
 GetAppMap(app_map) {
 	result := Map()
-	for app, info in app_map
-		result[app] := AppClass(info.Get('path', ''), info.Get('args', ''), info.Get('exe', ''), info.Get('title', ''), info.Get('data', ''))
+
+	for app, data in app_map {
+		path  := data.Get('path', '')
+		args  := data.Get('args', '')
+		exe   := data.Get('exe', '')
+		title := data.Get('title', '')
+		data  := data.Get('data', '')
+		result[app] := AppClass(path, args, exe, title, data)
+	}
+
 	return result
 }
