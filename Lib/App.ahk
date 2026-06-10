@@ -137,6 +137,9 @@ class AppClass {
 	}
 }
 
+/**
+ * @returns {Map<String, AppClass>}
+ */
 AppMap(app_map) {
 	result := Map()
 	for app, info in app_map
