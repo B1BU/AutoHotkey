@@ -1,10 +1,9 @@
 ; Based on code from https://www.autohotkey.com/boards/viewtopic.php?t=131332
-; Assisted by AI
 
 #Requires AutoHotkey v2.0
 
 #Include Extensions.ahk
-#Include Utils.ahk
+#Include Path.ahk
 
 PNGIcon(icon_path, icon_size := 0) {
 	buf := FileRead(icon_path, 'RAW')
@@ -34,7 +33,7 @@ PNGIcon(icon_path, icon_size := 0) {
 }
 
 Icon(path, size := 16) {
-	ahk_icons_dir := A_AhkDir '\Assets\Icons'
+	ahk_icons_dir := PathJoin(A_AhkDir, 'Assets\Icons')
 
 	SplitPath(path, &icon, &dir, &ext)
 

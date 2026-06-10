@@ -1,8 +1,7 @@
 #Requires AutoHotkey v2.0
 
-#Include Extensions.ahk
-
-global A_AhkDir := DirUp(A_LineFile, 1 + 1)
+#Include ..\
+#Include Lib\Extensions.ahk
 
 Spam(time, func, args*) {
 	loop {

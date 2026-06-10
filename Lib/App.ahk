@@ -23,7 +23,7 @@ class AppClass {
 		args  := ResolvePlaceholders(args, AppClass.placeholders)
 		exe   := ResolvePlaceholders(exe, AppClass.placeholders)
 		title := ResolvePlaceholders(title, AppClass.placeholders)
-		data := ResolvePlaceholders(data, AppClass.placeholders)
+		data  := ResolvePlaceholders(data, AppClass.placeholders)
 
 		if (!path and exe) {
 			path := exe

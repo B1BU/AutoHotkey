@@ -53,6 +53,13 @@ A_DarkMode: Integer
 /**
  * From `Extensions.ahk`
  *
+ * This variable contains the path to the user's AutoHotkey scripts folder.
+ */
+A_AhkDir: String
+
+/**
+ * From `Extensions.ahk`
+ *
  * Goes up in a provided path.
  * @param {(Path)} Str
  * The path to ascend.

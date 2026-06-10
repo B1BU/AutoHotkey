@@ -3,13 +3,6 @@
 /**
  * From `Utils.ahk`
  *
- * This variable contains the path to the user's AutoHotkey scripts folder.
- */
-A_AhkDir: String
-
-/**
- * From `Utils.ahk`
- *
  * Calls a function a number of times and displays how long it took.
  * @param {(Func)} Function
  * The function to call.

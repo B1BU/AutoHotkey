@@ -2,6 +2,8 @@
 
 #Include ..\..\
 #Include Lib\External\Yaml.ahk
-#Include Lib\Utils.ahk
+#Include Lib\Extensions.ahk
+#Include Lib\Path.ahk
 
-global Servers := Yaml(A_AhkDir . '/Data/Private/Servers.yaml')[1]
+filepath := PathJoin(A_AhkDir, 'Data/Private/Servers.yaml')
+global Servers := Yaml(filepath)[1]

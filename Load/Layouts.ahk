@@ -2,6 +2,7 @@
 
 #Include ..\
 #Include Lib\External\Yaml.ahk
-#Include Lib\Utils.ahk
+#Include Lib\Path.ahk
 
-global PowerToysLayouts := Yaml(A_AhkDir . '/Data/Layouts.yaml')[1]
+filepath := PathJoin(A_AhkDir, 'Data/Layouts.yaml')
+global PowerToysLayouts := Yaml(filepath)[1]
