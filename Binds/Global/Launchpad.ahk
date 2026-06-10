@@ -83,7 +83,7 @@ AppsKey & End:: {
 AppsKey & Del:: Apps['Xbox'].Toggle(1)      ; Start / Close Xbox App
 
 AppsKey & i:: {                             ; Start / Minimize Itch
-	if GetKeyState('Alt') {
+	if (GetKeyState('Alt')) {
 		Apps['Itch'].Kill()
 	} else {
 		Apps['Itch'].Toggle()
