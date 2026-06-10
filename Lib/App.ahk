@@ -140,7 +140,7 @@ class AppClass {
 /**
  * @returns {Map<String, AppClass>}
  */
-AppMap(app_map) {
+GetAppMap(app_map) {
 	result := Map()
 	for app, info in app_map
 		result[app] := AppClass(info.Get('path', ''), info.Get('args', ''), info.Get('exe', ''), info.Get('title', ''), info.Get('data', ''))
