@@ -5,5 +5,5 @@
 #Include Lib\Extensions.ahk
 #Include Lib\Path.ahk
 
-filepath := PathJoin(A_AhkDir, 'Data/Private/Creds.yaml')
+filepath := PathJoin(A_AhkRoot, 'Data/Private/Creds.yaml')
 global Creds := Yaml(filepath)[1]

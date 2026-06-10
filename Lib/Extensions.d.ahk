@@ -55,7 +55,7 @@ A_DarkMode: Integer
  *
  * This variable contains the path to the user's AutoHotkey scripts folder.
  */
-A_AhkDir: String
+A_AhkRoot: String
 
 /**
  * From `Extensions.ahk`

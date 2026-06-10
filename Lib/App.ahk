@@ -15,7 +15,7 @@ class AppClass {
 		'AppDataLocal',    A_AppDataLocal,
 		'AppDataLocalLow', A_AppDataLocalLow,
 		'AppComSpec',      A_ComSpec,
-		'AhkDir',          A_AhkDir
+		'AhkRoot',          A_AhkRoot
 	)
 
 	__New(path, args, exe, title, data) {

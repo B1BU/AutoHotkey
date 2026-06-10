@@ -33,7 +33,7 @@ PNGIcon(icon_path, icon_size := 0) {
 }
 
 Icon(path, size := 16) {
-	ahk_icons_dir := PathJoin(A_AhkDir, 'Assets\Icons')
+	ahk_icons_dir := PathJoin(A_AhkRoot, 'Assets\Icons')
 
 	SplitPath(path, &icon, &dir, &ext)
 

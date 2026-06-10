@@ -5,5 +5,5 @@
 #Include Lib\Path.ahk
 #Include Lib\App.ahk
 
-filepath := PathJoin(A_AhkDir, 'Data/Apps.yaml')
+filepath := PathJoin(A_AhkRoot, 'Data/Apps.yaml')
 global Apps := AppMap(Yaml(filepath)[1])

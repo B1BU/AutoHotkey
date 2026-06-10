@@ -18,8 +18,8 @@ RAlt & F4:: {                    ; Kill AutoHotkey
 	Apps['AHK'].Kill()
 }
 
-RAlt & e:: Run(A_AhkDir)         ; Open AutoHotkey folder
+RAlt & e:: Run(A_AhkRoot)         ; Open AutoHotkey folder
 
-RAlt & v:: VSCode.Open(A_AhkDir) ; Edit AutoHotkey folder
+RAlt & v:: VSCode.Open(A_AhkRoot) ; Edit AutoHotkey folder
 
 RAlt & s:: Apps['AHK Spy'].Run() ; Open AutoHotkey Window Spy
