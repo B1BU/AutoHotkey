@@ -4,5 +4,5 @@
 #Include Load\Apps.ahk
 
 #HotIf (WinActive(Apps['Audacity'].title))
-	#Include Binds\Common\Alt Redo.ahk
+	#Include Binds\Snippets\Alt Redo.ahk
 #HotIf
