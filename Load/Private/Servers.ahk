@@ -6,4 +6,4 @@
 #Include Lib\Path.ahk
 
 filepath := PathJoin(A_AhkRoot, 'Data/Private/Servers.yaml')
-global Servers := Yaml(filepath)[1]
+Servers := Yaml(filepath)[1]

@@ -6,4 +6,4 @@
 #Include Lib\Path.ahk
 
 filepath := PathJoin(A_AhkRoot, 'Data/Private/Creds.yaml')
-global Creds := Yaml(filepath)[1]
+Creds := Yaml(filepath)[1]

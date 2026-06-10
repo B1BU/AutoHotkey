@@ -5,8 +5,8 @@
 	Ctrl + Alt + V : Paste as symlink
 */
 
-global explorer_title := 'ahk_class CabinetWClass'
-global desktop_title := 'ahk_class WorkerW'
+explorer_title := 'ahk_class CabinetWClass'
+desktop_title := 'ahk_class WorkerW'
 
 Array.Prototype.Join := (this, sep := ', ') {
 	if (this.Length == 1) {

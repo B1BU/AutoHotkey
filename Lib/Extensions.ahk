@@ -1,16 +1,16 @@
 #Requires AutoHotkey v2.0
 
-global A_System32        := A_WinDir '\System32'
-global A_ProgramFilesx86 := A_ProgramFiles ' (x86)'
-global A_UserProfile     := EnvGet('USERPROFILE')
+A_System32        := A_WinDir '\System32'
+A_ProgramFilesx86 := A_ProgramFiles ' (x86)'
+A_UserProfile     := EnvGet('USERPROFILE')
 
-global A_AppDataRoot     := A_UserProfile '\AppData'
-global A_AppDataLocal    := A_AppDataRoot '\Local'
-global A_AppDataLocalLow := A_AppDataRoot '\LocalLow'
+A_AppDataRoot     := A_UserProfile '\AppData'
+A_AppDataLocal    := A_AppDataRoot '\Local'
+A_AppDataLocalLow := A_AppDataRoot '\LocalLow'
 
-global A_DarkMode        := !RegRead('HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize', 'AppsUseLightTheme')
+A_DarkMode        := !RegRead('HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize', 'AppsUseLightTheme')
 
-global A_AhkRoot         := DirUp(A_LineFile, 1 + 1)
+A_AhkRoot         := DirUp(A_LineFile, 1 + 1)
 
 DirUp(path, levels := 1) {
     Loop levels
