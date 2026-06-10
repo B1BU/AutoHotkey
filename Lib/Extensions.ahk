@@ -55,8 +55,13 @@ ArrSlice(arr, start, length := '') {
 }
 
 ArrJoin(arr, sep := '') {
-	result := ''
+	if !arr.Length
+		return ''
 
+	for i, value in arr
+		arr[i] := String(value)
+
+	result := ''
 	if sep {
 		result .= arr[1]
 		loop arr.Length - 1

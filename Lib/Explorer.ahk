@@ -32,7 +32,7 @@ class Explorer {
 				return
 			}
 
-			baseLinkPath := Path.Join(activePath, clipPath.name)
+			baseLinkPath := PathJoin(activePath, clipPath.name)
 
 			linkPath := baseLinkPath
 			loop {
