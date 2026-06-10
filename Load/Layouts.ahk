@@ -2,6 +2,7 @@
 
 #Include ..\
 #Include Lib\External\Yaml.ahk
+#Include Lib\Extensions.ahk
 #Include Lib\Path.ahk
 
 filepath := PathJoin(A_AhkRoot, 'Data/Layouts.yaml')

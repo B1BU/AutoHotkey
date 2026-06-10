@@ -2,6 +2,7 @@
 
 #Include ..\
 #Include Lib\External\Yaml.ahk
+#Include Lib\Extensions.ahk
 #Include Lib\Path.ahk
 #Include Lib\App.ahk
 
