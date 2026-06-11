@@ -1,4 +1,7 @@
 # Bibu's AutoHotkey setup
+## Installation
+Use the [Setup Script](Setup.ahk) to enable or disable running the [Startup Script](Startup.ahk) when Windows starts.
+
 ## Private data files
 Some functionality requires private data to be provided.
 

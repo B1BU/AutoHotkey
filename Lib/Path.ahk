@@ -133,4 +133,5 @@ class Path {
 	Parent() => this.Ascend()
 	AsPosix() => ArrJoin(this.parts, '/')
 	Absolute() => Path(PathToAbsolute(this))
+	Exists() => FileExist(this.path) != ''
 }
