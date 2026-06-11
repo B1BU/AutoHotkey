@@ -1,6 +1,8 @@
 # Bibu's AutoHotkey setup
 <a href="https://github.com/B1BU/AutoHotkey"><img alt="github" src="https://badgen.net/badge/icon/GitHub?icon=github&label&color=black"></a>
-<a href="https://github.com/B1BU/AutoHotkey/archive/refs/heads/main.zip"><img alt="github" src="https://badgen.net/badge/icon/Download?icon=github&label&color=black"></a>
+<a href="https://github.com/B1BU/AutoHotkey/archive/refs/heads/main.zip"><img alt="download repo" src="https://badgen.net/badge/icon/Download?icon=github&label&color=black"></a>
+
+This repo is meant primarily as a way for me to share my personal AutoHotkey setup with my friends. Do not expect something polished.
 
 ## Contents
 1. [Installation](#installation)
