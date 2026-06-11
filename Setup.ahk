@@ -1,6 +1,7 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
+#Include Lib\Extensions.ahk
 #Include Lib\Path.ahk
 
 Install(*) {
