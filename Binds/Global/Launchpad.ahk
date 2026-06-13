@@ -18,9 +18,7 @@ Media_Stop:: Apps['Spotify'].Toggle(1)      ; Start / Close Spotify
 ^Media_Stop:: Apps['Spotify'].Minimize()    ; Minimize Spotify
 !Media_Stop:: Apps['Spotify'].Kill()        ; Kill Spotify
 
-AppsKey & c:: {
-	Apps['Chrome'].Run()                    ; Start Chrome
-}
+AppsKey & c:: Apps['Chrome'].Run()          ; Start Chrome
 
 AppsKey & o:: Apps['Obsidian'].Toggle(1)    ; Start / Close Obsidian
 
