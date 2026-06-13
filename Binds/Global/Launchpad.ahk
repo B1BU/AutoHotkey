@@ -91,3 +91,5 @@ AppsKey & i:: {                             ; Start / Minimize Itch
 AppsKey & m:: Apps['Modrinth'].Toggle(1)    ; Start / Close Modrinth
 
 AppsKey & k:: Apps['Krita'].Toggle()        ; Start / Close Krita
+
+AppsKey & p:: Apps['Photopea'].Run()        ; Start Photopea

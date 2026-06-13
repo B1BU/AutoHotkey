@@ -46,14 +46,17 @@ Obsidian:
   path: ${ProgramFiles}\Obsidian\Obsidian.exe
 Notion:
   path: ${AppDataLocal}\Programs\Notion\Notion.exe
+Photopea:
+  path: ${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe
+  args: --profile-directory=Default --app-id=jdklklfpinionkgpmghaghehojplfjio
+Krita:
+  exe: ${ProgramFiles}\Krita (x64)\bin\krita.exe
 Fusion 360:
   exe: Fusion360.exe
 Blockbench:
   exe: Blockbench.exe
 Audacity:
   exe: audacity.exe
-Krita:
-  exe: ${ProgramFiles}\Krita (x64)\bin\krita.exe
 OBS:
   exe: obs64.exe
 
