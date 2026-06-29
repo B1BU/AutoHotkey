@@ -10,7 +10,7 @@ path_steam_library := 'D:\System\Program Data\Steam\Core\Library'
 AppsKey & sc073:: {
 	input := GetKeyState('Control') ? A_Clipboard : GetSelection()
 
-	if WinActive(Apps['Steam'].title) {
+	if WinActive(Apps['Steam Class'].title) {
 		if GetKeyState('Shift') {
 			if not query := Web.ToQuery(input)
 				return
