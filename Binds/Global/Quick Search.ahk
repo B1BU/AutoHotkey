@@ -5,7 +5,7 @@
 #Include Lib\Web.ahk
 #Include Load\Apps.ahk
 
-path_steam_library := 'D:\System\Program Data\Steam\Core\Library'
+PATH_STEAM_LIBRARY := 'D:\System\Program Data\Steam\Library'
 
 AppsKey & sc073:: {
 	input := GetKeyState('Control') ? A_Clipboard : GetSelection()
@@ -17,7 +17,7 @@ AppsKey & sc073:: {
 
 			Web.Open('https://www.steamgriddb.com/search/grids?term=' query)
 
-			out_dir := path_steam_library '\' input
+			out_dir := PATH_STEAM_LIBRARY '\' input
 			DirCreate(out_dir)
 			Run(out_dir)
 
