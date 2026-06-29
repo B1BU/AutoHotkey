@@ -14,6 +14,7 @@ AppsKey & sc073:: {
 		if GetKeyState('Shift') {
 			if not query := Web.ToQuery(input)
 				return
+
 			Web.Open('https://www.steamgriddb.com/search/grids?term=' query)
 
 			out_dir := path_steam_library '\' input
