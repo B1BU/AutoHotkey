@@ -105,6 +105,9 @@ Xbox:
 Modrinth:
   path: ${AppDataLocal}\Modrinth App\Modrinth App.exe
   exe: Modrinth App.exe
+XMCL:
+  path: shell:AppsFolder\xmcl_wbnnev551gwxy!xmcl
+  exe: X Minecraft Launcher.exe
 Itch:
   path: ${AppDataLocal}\itch\itch-setup.exe
   args: --prefer-launch --appname itch

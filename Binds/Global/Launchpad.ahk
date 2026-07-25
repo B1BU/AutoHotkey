@@ -88,7 +88,13 @@ AppsKey & i:: {                             ; Start / Minimize Itch
 	}
 }
 
-AppsKey & m:: Apps['Modrinth'].Toggle(1)    ; Start / Close Modrinth
+AppsKey & m:: {
+	if GetKeyState('Shift') {
+		Apps['XMCL'].Toggle(1)              ; Start / Close X Minecraft Launcher
+	} else {
+		Apps['Modrinth'].Toggle(1)          ; Start / Close Modrinth
+	}
+}
 
 AppsKey & k:: Apps['Krita'].Toggle()        ; Start / Close Krita
 
