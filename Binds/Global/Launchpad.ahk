@@ -12,7 +12,7 @@
 
 AppsKey & =:: Apps['Calculator'].Toggle(1)  ; Start / Close Calculator
 
-AppsKey & x:: Apps['TaskBarX'].Kill()       ; Restart TaskBarX
+AppsKey & t:: Apps['TaskBarX'].Kill()       ; Restart TaskBarX
 
 Media_Stop:: Apps['Spotify'].Toggle(1)      ; Start / Close Spotify
 ^Media_Stop:: Apps['Spotify'].Minimize()    ; Minimize Spotify
@@ -88,13 +88,9 @@ AppsKey & i:: {                             ; Start / Minimize Itch
 	}
 }
 
-AppsKey & m:: {
-	if GetKeyState('Shift') {
-		Apps['XMCL'].Toggle(1)              ; Start / Close X Minecraft Launcher
-	} else {
-		Apps['Modrinth'].Toggle(1)          ; Start / Close Modrinth
-	}
-}
+AppsKey & m:: Apps['Modrinth'].Toggle(1)    ; Start / Close Modrinth
+
+AppsKey & x:: Apps['XMCL'].Toggle(1)        ; Start / Close X Minecraft Launcher
 
 AppsKey & k:: Apps['Krita'].Toggle()        ; Start / Close Krita
 
