@@ -10,6 +10,9 @@ Terminal:
 Terminal PowerShell:
   path: wt
   args: -M -p "Windows PowerShell" powershell -NoExit -Command "Clear-Host"
+Terminal PowerShell No Command:
+  path: wt
+  args: -M -p "Windows PowerShell" powershell -NoExit
 CMD:
   path: cmd.exe
 PowerShell:
