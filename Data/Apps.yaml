@@ -52,6 +52,7 @@ Notion:
 Photopea:
   path: ${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe
   args: --profile-directory=Default --app-id=jdklklfpinionkgpmghaghehojplfjio
+  title: Photopea ahk_class Chrome_WidgetWin_1
 Krita:
   exe: ${ProgramFiles}\Krita (x64)\bin\krita.exe
 Fusion 360:
