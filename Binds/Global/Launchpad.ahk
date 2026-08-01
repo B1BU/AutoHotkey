@@ -40,6 +40,8 @@ AppsKey & g:: {
 	}
 }
 
+AppsKey & l:: Apps['WLED'].Toggle(1)        ; Start / Close WLED
+
 AppsKey & v:: Apps['VSCode'].Run()          ; Start VSCode
 
 AppsKey & d:: {

@@ -70,6 +70,10 @@ AHK Spy:
   path: ${ProgramFiles}\AutoHotkey\UX\WindowSpy.ahk
 AHK Help:
   title: AutoHotkey v2 Help ahk_class HH Parent
+WLED:
+  path: ${ProgramFiles}\Google\Chrome\Application\chrome_proxy.exe
+  args: --profile-directory=Default --app-id=pmclkmgdjknionminchoogppmdcpbjdg
+  title: WLED ahk_class Chrome_WidgetWin_1
 TaskBarX:
   path: D:\System\Programs\TaskbarX\TaskbarX.exe
 Magpie:
