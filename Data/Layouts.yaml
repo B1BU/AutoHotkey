@@ -1,27 +1,18 @@
 - label: '&Fullscreen'
   icon: Layout\Fullscreen
-  key: 0
-- label: 'Split &Horizontally'
-  icon: Layout\H 2 Alt
   key: 1
-- label: '&Thirds'
-  icon: Layout\H 3
+- label: '&Cross'
+  icon: Layout\Cross
   key: 2
-- label: 'Third &Left'
-  icon: Layout\H 3 1-2
+- label: '&Thirds'
+  icon: Layout\H3
   key: 3
-- label: 'Third &Right'
-  icon: Layout\H 3 2-1
+- label: 'P&riority'
+  icon: Layout\Priority Thin
   key: 4
-- label: '&Square'
-  icon: Layout\H 4 1-2-1
-  key: 5
-- label: 'Split &Vertically'
-  icon: Layout\V 2 Alt
-  key: 6
-- label: '&Captures'
-  icon: Layout\Generic
-  key: 7
-- label: '&Picture-in-picture'
+- label: 'Pictur&e-in-picture'
   icon: Layout\Thirds
-  key: 8
+  key: 5
+- label: 'C&aptures'
+  icon: Layout\Generic
+  key: 6
