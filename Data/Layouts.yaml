@@ -1,18 +1,15 @@
-- label: '&Fullscreen'
-  icon: Layout\Fullscreen
-  key: 1
-- label: '&Cross'
+- label: '&1 Cross'
   icon: Layout\Cross
-  key: 2
-- label: '&Thirds'
+  key: 1
+- label: '&2 Thirds'
   icon: Layout\H3
   key: 3
-- label: 'P&riority'
+- label: '&3 Picture-in-picture'
+  icon: Layout\Thirds
+  key: 2
+- label: '&4 Priority'
   icon: Layout\Priority Thin
   key: 4
-- label: 'Pictur&e-in-picture'
-  icon: Layout\Thirds
-  key: 5
-- label: 'C&aptures'
+- label: '&5 Trimming'
   icon: Layout\Generic
-  key: 6
+  key: 5
