@@ -7,4 +7,5 @@
 #Include Launchpad.ahk
 #Include Text Processing.ahk
 #Include Quick Search.ahk
+#Include Windows.ahk
 #Include #Apps.ahk
