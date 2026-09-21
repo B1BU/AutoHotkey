@@ -5,6 +5,7 @@
 #Include Media Controls.ahk
 #Include Screen Captures.ahk
 #Include Launchpad.ahk
+#Include Utils.ahk
 #Include Text Processing.ahk
 #Include Quick Search.ahk
 #Include Windows.ahk
