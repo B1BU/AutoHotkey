@@ -82,105 +82,106 @@ FortniteInvGetHover(&row, &slot) {
 	return true
 }
 
-#HotIf WinActive(Apps['Fortnite'].title)
-	; GENERAL
-	~LAlt:: { ; Prevents autorun from being triggered when pressing alt combos
-		KeyWait('LAlt')
-		Send('{Up}')
-	}
+; ! BROKEN
+; #HotIf WinActive(Apps['Fortnite'].title)
+; 	; GENERAL
+; 	~LAlt:: { ; Prevents autorun from being triggered when pressing alt combos
+; 		KeyWait('LAlt')
+; 		Send('{Up}')
+; 	}
 
-	!LButton:: Enter
-	!RButton:: Escape
-	!XButton2:: x
-	!XButton1:: c
+; 	!LButton:: Enter
+; 	!RButton:: Escape
+; 	!XButton2:: x
+; 	!XButton1:: c
 
-	; EMOTES
-	~\:: b ; Lobby emote override
+; 	; EMOTES
+; 	~\:: b ; Lobby emote override
 
-	~\ & q:: { ; Previous page
-		Send('{WheelUp}')
-		Sleep(100)
-	}
+; 	~\ & q:: { ; Previous page
+; 		Send('{WheelUp}')
+; 		Sleep(100)
+; 	}
 
-	~\ & e:: { ; Next page
-		Send('{WheelDown}')
-		Sleep(100)
-	}
+; 	~\ & e:: { ; Next page
+; 		Send('{WheelDown}')
+; 		Sleep(100)
+; 	}
 
-	; INVENTORY
-	~Tab & ~LButton:: { ; View item info
-		if not KeyWait('LButton', 'T0.375') {
-			Send('{v Down}')
-			KeyWait('LButton')
-			Send('{v Up}')
-		}
-	}
+; 	; INVENTORY
+; 	~Tab & ~LButton:: { ; View item info
+; 		if not KeyWait('LButton', 'T0.375') {
+; 			Send('{v Down}')
+; 			KeyWait('LButton')
+; 			Send('{v Up}')
+; 		}
+; 	}
 
-	~Tab & RButton:: { ; Drop item
-		if FortniteInvGetHover(&row, &slot) {
-			if row == 1 {
-				Send('{Up}{Down}{Up ' row - 1 '}{Right ' slot - 1 '}')
-				Send('{x Down}')
-				KeyWait('RButton')
-				Send('{x Up}')
-			} else {
-				Send('{x}')
-			}
-		}
-	}
+; 	~Tab & RButton:: { ; Drop item
+; 		if FortniteInvGetHover(&row, &slot) {
+; 			if row == 1 {
+; 				Send('{Up}{Down}{Up ' row - 1 '}{Right ' slot - 1 '}')
+; 				Send('{x Down}')
+; 				KeyWait('RButton')
+; 				Send('{x Up}')
+; 			} else {
+; 				Send('{x}')
+; 			}
+; 		}
+; 	}
 
-	~Tab & MButton:: z ; Drop half
+; 	~Tab & MButton:: z ; Drop half
 
-	; COMMS
-	~RButton & e:: {
-		Send('{Home}')
-		KeyWait('e')
-	}
+; 	; COMMS
+; 	~RButton & e:: {
+; 		Send('{Home}')
+; 		KeyWait('e')
+; 	}
 
-	; BUILDING
-	#HotIf WinActive(Apps['Fortnite'].title) and not GetKeyState('ScrollLock', 'T')
-		XButton2 & q:: {
-			SetScrollLockState('On')
-			Send('{m}')
-		}
+; 	; BUILDING
+; 	#HotIf WinActive(Apps['Fortnite'].title) and not GetKeyState('ScrollLock', 'T')
+; 		XButton2 & q:: {
+; 			SetScrollLockState('On')
+; 			Send('{m}')
+; 		}
 
-		XButton2 & e:: ,
-		XButton2 & r:: .
-		XButton2 & f:: {
-			Send('{f1}')
-			SetScrollLockState('On')
-		}
-		XButton2 & x:: {
-			Send('{f2}')
-			SetScrollLockState('On')
-		}
-		XButton2 & c:: {
-			Send('{f3}')
-			SetScrollLockState('On')
-		}
-		XButton2 & v:: {
-			Send('{f4}')
-			SetScrollLockState('On')
-		}
-		XButton2 & g:: {
-			Send('{f5}')
-			SetScrollLockState('On')
-		}
-	#HotIf WinActive(Apps['Fortnite'].title) and GetKeyState('ScrollLock', 'T')
-		~WheelDown:: SetScrollLockState('Off')
-		~WheelUp:: SetScrollLockState('Off')
-		~XButton1:: SetScrollLockState('Off')
+; 		XButton2 & e:: ,
+; 		XButton2 & r:: .
+; 		XButton2 & f:: {
+; 			Send('{f1}')
+; 			SetScrollLockState('On')
+; 		}
+; 		XButton2 & x:: {
+; 			Send('{f2}')
+; 			SetScrollLockState('On')
+; 		}
+; 		XButton2 & c:: {
+; 			Send('{f3}')
+; 			SetScrollLockState('On')
+; 		}
+; 		XButton2 & v:: {
+; 			Send('{f4}')
+; 			SetScrollLockState('On')
+; 		}
+; 		XButton2 & g:: {
+; 			Send('{f5}')
+; 			SetScrollLockState('On')
+; 		}
+; 	#HotIf WinActive(Apps['Fortnite'].title) and GetKeyState('ScrollLock', 'T')
+; 		~WheelDown:: SetScrollLockState('Off')
+; 		~WheelUp:: SetScrollLockState('Off')
+; 		~XButton1:: SetScrollLockState('Off')
 
-		q:: {
-			SetScrollLockState('Off')
-			Send('{m}')
-		}
+; 		q:: {
+; 			SetScrollLockState('Off')
+; 			Send('{m}')
+; 		}
 
-		e:: ,
-		r:: .
-		f:: Send('{f1}')
-		x:: Send('{f2}')
-		c:: Send('{f3}')
-		v:: Send('{f4}')
-		g:: Send('{f5}')
-#HotIf
+; 		e:: ,
+; 		r:: .
+; 		f:: Send('{f1}')
+; 		x:: Send('{f2}')
+; 		c:: Send('{f3}')
+; 		v:: Send('{f4}')
+; 		g:: Send('{f5}')
+; #HotIf
