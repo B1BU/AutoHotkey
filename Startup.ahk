@@ -3,6 +3,7 @@
 #NoTrayIcon
 
 A_MenuMaskKey := 'vkE8'
+A_MaxHotkeysPerInterval := 200
 
 #Include Binds\#Global.ahk
 #Include Binds\#Scoped.ahk
