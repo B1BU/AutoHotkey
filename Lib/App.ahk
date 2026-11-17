@@ -66,7 +66,11 @@ class AppClass {
 			return
 		}
 
-		try Run(target)
+		try {
+			Run(target,,, &pid)
+			if WinWait('ahk_pid ' pid,, 5)
+				WinActivate('ahk_pid ' pid)
+		}
 	}
 
 	Focus() {
