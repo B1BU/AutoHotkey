@@ -75,7 +75,6 @@ class AppClass {
 
 	Minimize() {
 		try WinMinimize(this.title)
-		WinActivate('ahk_class WorkerW')
 	}
 
 	Close() {
